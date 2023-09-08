@@ -1,0 +1,1124 @@
+bloodmeal_id,locus_count,est_noc,match,human_id,log10_lr,notes,thresh_low
+K05_00141,9,1,yes,K05_3,8.82,passed all filters,8
+M13_00124,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+M07_00436,9,1,yes,M07_2,10.19,passed all filters,9.5
+M07_00438,9,2,yes,M07_7,4.24,passed all filters,3.5
+M07_00438,9,2,yes,M07_10,8.98,passed all filters,3.5
+K02_00188,9,1,yes,K02_5,8.91,passed all filters,8
+M17_00129,4,1,no,NA,NA,> min NOC matches,9
+M05_00109,9,1,yes,M05_3,9.78,passed all filters,9
+M16_00194,9,1,yes,M16_5,8.49,passed all filters,7.5
+K13_00158,9,1,yes,K16_4,9.32,passed all filters,8.5
+M01_0411,9,1,yes,M01_6,9.61,passed all filters,9
+S13_00023,9,2,yes,S13_5,10.54,passed all filters,10
+K07_00111,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0578,9,1,yes,M07_10,10.11,passed all filters,9.5
+M09_0409,9,1,yes,M09_13,10.29,passed all filters,9.5
+M01_00174,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M17_00046,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S16_00007,9,1,yes,S16_6,8.64,passed all filters,8
+M09_0450,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+N14_00013,9,1,yes,N14_3,10.21,passed all filters,9.5
+S06_00045,9,1,yes,S06_6,8.23,passed all filters,7.5
+K13_00169,9,1,yes,K16_4,9.32,passed all filters,8.5
+L14_00004,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S03_00024,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L08_00012,9,2,yes,L08_5,9.77,passed all filters,1.5
+L08_00012,9,2,yes,L08_2,2.04,passed all filters,1.5
+K13_00181,9,2,yes,K13_3,10.07,passed all filters,9.5
+M03_00128,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00417,9,2,yes,M07_1,6.43,passed all filters,5.5
+M17_00015,9,1,yes,M17_4,9.25,passed all filters,8.5
+S10_00085,6,1,yes,S02_5,4.67,passed all filters,4
+K13_00074,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_00181,9,1,yes,M03_1,8.45,passed all filters,7.5
+K05_00325,9,1,yes,K05_3,8.82,passed all filters,8
+M01_00334,9,1,yes,M01_5,8.96,passed all filters,8
+M01_00397,4,1,no,NA,NA,all log10LRs < 1.5,NA
+K02_00143,9,1,yes,K02_10,8.57,passed all filters,8
+M09_00542,9,1,yes,M09_13,10.29,passed all filters,9.5
+M09_0448,9,1,yes,M09_4,9.13,passed all filters,8.5
+M06_0217,9,2,yes,M06_2,7.47,passed all filters,6.5
+M06_0217,9,2,yes,M06_5,10.56,passed all filters,6.5
+K13_00167,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L18_00002,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_XX358,1,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles,NA
+N04_00005,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M06_0199,9,1,yes,M06_1,10.08,passed all filters,9.5
+M17_00147,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M06_0189,9,1,yes,M06_3,10.22,passed all filters,9.5
+M16_00371,9,1,yes,M16_5,8.49,passed all filters,7.5
+S01_00116,9,1,yes,S01_6,8.96,passed all filters,8
+S14_00025,9,1,yes,S14_7,10.22,passed all filters,9.5
+M16_00262,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00333,3,1,no,NA,NA,> min NOC matches,9.5
+M07_0617,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K03_00096,2,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+M17_00057,9,1,yes,M17_4,9.25,passed all filters,8.5
+N13_00011,9,1,yes,N06_6,10.19,passed all filters,9.5
+K13_00117,9,1,yes,K13_15-K16_3,7.91,passed all filters,7
+K13_00168,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L04_00013,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0453,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K15_00035,9,1,yes,K15_1,8.69,passed all filters,8
+K02_00237,9,1,yes,K02_5,8.91,passed all filters,8
+K02_00142,9,1,yes,K02_5,8.91,passed all filters,8
+M16_00191,9,2,yes,M16_4,8.7,passed all filters,8
+M17_00018,9,1,yes,M17_4,9.25,passed all filters,8.5
+M17_00159,2,1,no,NA,NA,all log10LRs NA or Inf,NA
+M09_00470,9,2,yes,M09_7,6.01,passed all filters,5.5
+M09_00470,9,2,yes,M09_13,6.75,passed all filters,5.5
+S02_00137,9,1,yes,S02_7,8.1,passed all filters,7.5
+M06_0196,9,1,yes,M06_1,10.08,passed all filters,9.5
+M17_00059,9,1,yes,M17_3,10.38,passed all filters,9.5
+M07_0547,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S04_00121,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00439,9,1,no,NA,NA,all log10LRs < 1.5,NA
+S14_00067,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00196,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00096,9,1,yes,M17_4,9.25,passed all filters,8.5
+M16_00148,9,2,yes,M16_6,10.82,passed all filters,10
+M17_00184,9,1,yes,M17_5,9.23,passed all filters,8.5
+M18_00002,9,1,yes,M18_2,10.25,passed all filters,9.5
+N11_00020,9,1,yes,N11_22,12.15,passed all filters,11.5
+K07_00096,6,1,yes,K07_5,6.38,passed all filters,5.5
+K13_00098,9,1,yes,K16_5,9.65,passed all filters,9
+M03_00139,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M16_00114,9,1,yes,M16_5,8.49,passed all filters,7.5
+M16_00193,9,1,yes,M16_4,9.23,passed all filters,8.5
+S04_00124,9,1,yes,S04_6,7.56,passed all filters,7
+K05_00323,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00325,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00330,9,2,yes,M16_5,6.22,passed all filters,5.5
+M16_00330,9,2,yes,M16_8,7.5,passed all filters,5.5
+N09_00004,9,1,yes,N09_9,9.93,passed all filters,9
+M01_00340,9,1,yes,M01_5,8.96,passed all filters,8
+N14_00024,9,1,yes,N14_3,10.21,passed all filters,9.5
+N14_00021,9,1,yes,N14_3,10.21,passed all filters,9.5
+K13_00178,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N13_00040,9,1,yes,N13_5,8.6,passed all filters,8
+M05_00099,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00124,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00017,9,1,yes,M17_3,10.38,passed all filters,9.5
+N11_00010,9,2,yes,N11_2,9.15,passed all filters,8
+N11_00010,9,2,yes,N11_12,8.77,passed all filters,8
+S02_00136,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00349,9,2,yes,M01_5,8.92,passed all filters,3.5
+M01_00349,9,2,yes,N04_5,4.12,passed all filters,3.5
+L09_00009,9,1,yes,L09_6,9.59,passed all filters,9
+L11_00005,4,1,no,NA,NA,all log10LRs < 1.5,NA
+L17_00001,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K12_00173,9,1,yes,K12_4,9.34,passed all filters,8.5
+N04_00010,9,1,yes,N04_6,8.7,passed all filters,8
+M17_00117,9,1,yes,M17_4,9.25,passed all filters,8.5
+K04_00032,9,1,yes,K04_5,8.41,passed all filters,7.5
+K05_00324,1,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+M07_00409,9,1,yes,M07_7,13.51,passed all filters,13
+M16_00342,9,1,yes,M16_2,10.62,passed all filters,10
+M17_00043,9,1,yes,M17_4,9.25,passed all filters,8.5
+M01_0274,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S14_00024,9,1,yes,S14_7,10.22,passed all filters,9.5
+K13_00087,9,2,yes,K13_3,10.02,passed all filters,9.5
+K15_00060,9,1,yes,K15_3,9.09,passed all filters,8.5
+M17_00140,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00191,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00102,9,1,yes,S02_4,9.92,passed all filters,9
+S05_00056,9,1,yes,S05_2,8.79,passed all filters,8
+M16_00343,9,1,yes,M16_4,9.23,passed all filters,8.5
+S10_00099,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00368,9,1,yes,M01_1,9.96,passed all filters,9
+S01_00123,9,2,yes,K04_1,6.21,passed all filters,5.5
+K02_00182,9,1,yes,K02_7,8.8,passed all filters,8
+M09_00526,9,1,yes,M09_7,9.58,passed all filters,9
+M17_00121,9,1,yes,M17_4,9.25,passed all filters,8.5
+N13_00049,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00076,9,1,yes,M17_4,9.25,passed all filters,8.5
+M17_00013,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00086,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K10_00080,9,1,no,NA,NA,all log10LRs < 1.5,NA
+N14_00007,9,1,yes,N14_3,10.21,passed all filters,9.5
+L02_00010,9,1,yes,L02_1,8.55,passed all filters,8
+M13_00175,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K10_00077,9,1,yes,K10_7,8.99,passed all filters,8
+K05_00314,9,1,yes,K05_3,8.82,passed all filters,8
+M06_00126,9,2,yes,M06_6,11.93,passed all filters,11
+K12_00144,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N07_00020,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K01_00169,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K04_00047,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0580,9,1,yes,M07_10,10.11,passed all filters,9.5
+K12_00134,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00158,9,1,yes,M01_3,9.88,passed all filters,9
+K04_00046,9,1,yes,K04_1,9.91,passed all filters,9
+N15_00031,9,1,yes,N15_3,8.6,passed all filters,8
+M09_00509,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00026,9,1,yes,M17_4,9.25,passed all filters,8.5
+K05_00206,9,1,yes,K05_3,8.82,passed all filters,8
+K10_00103,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L16_00021,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K07_00120,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+L12_00003,9,1,yes,L12_1,9.78,passed all filters,9
+M17_00102,9,1,yes,M17_4,9.25,passed all filters,8.5
+L08_00014,9,1,yes,L08_5,9.93,passed all filters,9
+N13_00042,9,1,yes,N13_5,8.6,passed all filters,8
+M07_0476,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M17_00063,9,1,yes,M17_5,9.23,passed all filters,8.5
+M17_00131,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0514,9,1,yes,M07_1,10.64,passed all filters,10
+S09_00074,9,2,yes,S09_5,8.23,passed all filters,7.5
+K01_00116,9,1,yes,L08_7,13.39,passed all filters,12.5
+M14_00118,9,1,yes,M14_5,9.9,passed all filters,9
+K03_00111,9,1,yes,K03_5,8.72,passed all filters,8
+M16_00266,9,2,yes,M16_3,3.22,passed all filters,2.5
+M16_00266,9,2,yes,M16_4,8.74,passed all filters,2.5
+M03_00109,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+S02_00094,9,1,yes,S02_7,8.1,passed all filters,7.5
+K13_00179,9,2,yes,K16_4,6.21,passed all filters,5.5
+K11_00044,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00193,9,1,yes,S02_4,9.91,passed all filters,9
+K07_00117,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+M06_0230,9,1,yes,M06_3,10.22,passed all filters,9.5
+N07_00006,9,1,yes,N07_1,9.2,passed all filters,8.5
+S02_00105,9,1,yes,S02_7,8.1,passed all filters,7.5
+M16_00166,9,1,yes,M16_5,8.49,passed all filters,7.5
+K13_00166,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S05_00040,9,1,yes,S05_8,10.86,passed all filters,10
+M04_00098,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00447,9,1,yes,M07_7,13.51,passed all filters,13
+K12_00119,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00119,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M18_00004,2,1,no,NA,NA,all log10LRs NA or Inf,NA
+L13_00005,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0403,9,1,yes,M09_12,8.77,passed all filters,8
+M12_00029,9,1,yes,M12_8,9.79,passed all filters,9
+M13_00117,2,1,no,NA,NA,all log10LRs NA or Inf,NA
+K02_00228,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N04_00024,9,2,yes,M01_5,7.36,passed all filters,6.5
+N04_00024,9,2,yes,N04_5,9.69,passed all filters,6.5
+S02_00148,9,1,yes,S02_7,8.1,passed all filters,7.5
+K05_00157,9,1,yes,K05_5,8.51,passed all filters,8
+S14_00087,9,1,yes,S14_4,7.39,passed all filters,6.5
+K03_00112,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00533,9,2,yes,M09_7,9.58,passed all filters,9
+M16_00327,9,1,yes,M16_5,8.48,passed all filters,7.5
+K05_00311,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M06_0190,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00158,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00523,9,2,yes,M09_13,9.23,passed all filters,8.5
+L13_00003,2,1,no,NA,NA,all log10LRs NA or Inf,NA
+K13_00174,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0474,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K14_00078,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M03_00169,9,1,yes,M03_1,8.45,passed all filters,7.5
+K04_00022,9,1,yes,K04_1,9.91,passed all filters,9
+K16_00010,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S04_00120,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N14_00047,9,1,yes,N14_2,12.35,passed all filters,11.5
+K13_00214,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N13_00029,9,2,yes,N13_3,9.29,passed all filters,8.5
+K01_00107,7,1,yes,L04_6,4.35,passed all filters,3.5
+M06_0231,9,2,yes,M06_5,8.45,passed all filters,7
+M06_0231,9,2,yes,M06_3,7.95,passed all filters,7
+L04_00003,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K07_00091,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M13_00149,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00171,4,1,no,NA,NA,> min NOC matches,2
+N13_00062,9,1,yes,N13_5,8.6,passed all filters,8
+S01_00117,9,1,yes,S01_6,8.96,passed all filters,8
+M17_00145,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K03_00088,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_0155,9,1,yes,M03_1,8.45,passed all filters,7.5
+S02_00115,2,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+M01_00362,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+M16_00372,9,1,yes,M16_5,8.49,passed all filters,7.5
+M09_0440,9,1,yes,M09_4,9.13,passed all filters,8.5
+S16_00031,9,1,yes,S16_4,8.04,passed all filters,7.5
+M17_00103,9,1,yes,M17_4,9.25,passed all filters,8.5
+K11_00067,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00189,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K11_00038,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00230,9,1,yes,K13_15-K16_3,7.91,passed all filters,7
+K15_00038,9,1,yes,K15_1,8.69,passed all filters,8
+M01_0273,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+M03_00183,9,1,yes,M01_5,8.96,passed all filters,8
+M09_00484,6,2,yes,M01_3,1.66,passed all filters,1
+M09_00484,6,2,yes,S03_5,1.1,passed all filters,1
+S10_00042,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M13_00128,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00057,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00159,9,1,yes,K01_5,9.16,passed all filters,8.5
+K09_00046,9,1,yes,K09_1,9.78,passed all filters,9
+S05_00038,9,1,yes,S05_4,10.74,passed all filters,10
+M01_00332,9,2,yes,M01_3,9.86,passed all filters,9
+K05_00153,9,1,yes,K05_5,8.51,passed all filters,8
+K02_00136,9,1,yes,K02_13,8.86,passed all filters,8
+S05_00050,9,2,yes,S05_5,4.34,passed all filters,3.5
+M16_00353,9,2,yes,M16_2,6.95,passed all filters,2.5
+M16_00353,9,2,yes,M16_5,3,passed all filters,2.5
+N15_00044,9,1,yes,N15_3,8.6,passed all filters,8
+S14_00023,9,1,yes,S14_2,9.68,passed all filters,9
+M01_00372,9,1,yes,M01_5,8.96,passed all filters,8
+K13_00184,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0365,9,2,yes,M09_3,9.88,passed all filters,9
+K15_00053,9,2,yes,K15_4,5.22,passed all filters,4.5
+K15_00053,9,2,yes,K15_3,8.25,passed all filters,4.5
+M09_0387,9,1,yes,M09_4,9.13,passed all filters,8.5
+M09_0415,9,1,yes,M09_4,9.13,passed all filters,8.5
+M05_00142,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K01_00190,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00511,9,1,yes,M09_13,10.29,passed all filters,9.5
+K02_00163,9,1,yes,K02_8,7.43,passed all filters,6.5
+M01_00361,9,2,yes,M01_3,9.18,passed all filters,8.5
+M15_00191,9,1,yes,M15_7,10.04,passed all filters,9.5
+M17_00141,9,1,yes,M17_4,7.19,passed all filters,6.5
+M16_00297,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0404,9,1,yes,M09_3,9.91,passed all filters,9
+N13_00075,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00185,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L18_00015,9,2,yes,L18_3,9.12,passed all filters,8.5
+K11_00085,9,1,yes,K11_1,10.82,passed all filters,10
+M17_00036,9,1,yes,M17_3,10.38,passed all filters,9.5
+M15_00187,9,1,yes,M15_5,9.77,passed all filters,9
+M09_XX359,9,2,yes,M09_4,8.7,passed all filters,6
+M09_XX359,9,2,yes,M09_5,6.5,passed all filters,6
+M01_00351,9,2,no,NA,NA,all log10LRs NA or Inf,NA
+S05_00047,9,1,yes,S05_4,10.74,passed all filters,10
+N16_00002,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00155,9,1,yes,K05_3,8.82,passed all filters,8
+K13_00173,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+M01_00357,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+M17_00116,9,1,yes,M17_4,9.25,passed all filters,8.5
+M16_00183,9,1,yes,M16_5,8.49,passed all filters,7.5
+M17_00122,9,1,yes,M17_4,9.25,passed all filters,8.5
+K11_00053,9,1,yes,N14_3,6.16,passed all filters,5.5
+M06_00111,9,1,yes,M06_2,9.91,passed all filters,9
+M09_00459,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00077,9,1,yes,M17_4,9.25,passed all filters,8.5
+K11_00065,9,1,yes,K11_3,11.74,passed all filters,11
+M16_00333,9,1,yes,M16_4,9.23,passed all filters,8.5
+M17_00106,9,1,yes,M17_4,9.25,passed all filters,8.5
+M17_00113,9,1,yes,M17_4,9.25,passed all filters,8.5
+K05_00315,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+K13_00213,9,1,yes,K16_5,9.65,passed all filters,9
+M17_00037,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M15_00230,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_XX357,9,2,no,NA,NA,> min NOC matches,5
+S09_00043,9,1,yes,S09_8,8.9,passed all filters,8
+N11_00029,9,1,yes,N11_7,8.44,passed all filters,7.5
+S09_00048,9,1,yes,S09_2,9.15,passed all filters,8.5
+M16_00156,9,1,yes,M16_3,10.59,passed all filters,10
+L13_00007,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N13_00060,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00184,9,2,yes,M01_3,9.88,passed all filters,9
+K01_00160,9,1,yes,K01_5,9.16,passed all filters,8.5
+M07_0472,9,1,yes,M07_1,10.64,passed all filters,10
+K01_00119,9,1,yes,K01_4,8.49,passed all filters,7.5
+M07_00423,9,1,yes,M07_2,10.19,passed all filters,9.5
+S02_00079,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00136,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00527,9,1,yes,M09_13,10.29,passed all filters,9.5
+M19_00001,9,1,yes,M19_1,8.59,passed all filters,8
+K13_00135,9,1,yes,K16_5,9.65,passed all filters,9
+S09_00047,9,1,no,NA,NA,all log10LRs < 1.5,NA
+S04_00125,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M17_00033,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L16_00017,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0478,9,1,yes,M07_3,9.64,passed all filters,9
+S02_00075,9,1,yes,S02_4,9.92,passed all filters,9
+N09_00014,9,1,yes,N09_5,8.93,passed all filters,8
+N03_00017,9,1,yes,N03_3,8.97,passed all filters,8
+M07_0585,9,1,no,NA,NA,all log10LRs < 1.5,NA
+L02_00009,9,1,yes,L02_6,8.83,passed all filters,8
+M09_0369,9,1,yes,M09_7,9.58,passed all filters,9
+K01_00103,9,1,yes,K01_5,9.16,passed all filters,8.5
+M01_00392,9,2,yes,M01_3,6.05,passed all filters,5.5
+M01_00392,9,2,yes,M01_5,6.56,passed all filters,5.5
+M04_00108,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K04_00029,9,1,yes,K04_3,9.98,passed all filters,9
+M17_00125,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N03_00007,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N13_00041,9,1,yes,N13_5,8.6,passed all filters,8
+S16_00029,9,1,yes,S16_4,8.09,passed all filters,7.5
+M09_0364,9,1,yes,M09_8,9.44,passed all filters,8.5
+M09_XX360,9,1,yes,M09_4,8.4,passed all filters,7.5
+S04_00086,9,2,yes,S04_6,6.84,passed all filters,6
+K15_00032,9,1,yes,K15_1,8.69,passed all filters,8
+S02_00104,9,1,yes,S02_4,9.92,passed all filters,9
+S14_00018,9,2,yes,S14_5,7.86,passed all filters,7
+S04_00088,9,1,yes,S04_13,8.49,passed all filters,7.5
+N15_00008,9,1,yes,N15_3,8.6,passed all filters,8
+M17_00139,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00169,9,1,yes,M16_3,10.59,passed all filters,10
+N13_00006,9,2,no,NA,NA,all log10LRs < 1.5,NA
+M07_0544,9,1,yes,M07_10,10.11,passed all filters,9.5
+N07_00005,9,1,yes,N07_5,8.03,passed all filters,7.5
+M01_0405,5,1,no,NA,NA,> min NOC matches,2
+M06_0197,2,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+M07_0452,9,1,yes,M07_1,10.64,passed all filters,10
+S05_00055,9,1,yes,S05_2,8.79,passed all filters,8
+S04_00112,9,1,yes,S04_8,10.32,passed all filters,9.5
+K01_00139,9,1,yes,K01_3,8.74,passed all filters,8
+K11_00048,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K15_00059,9,1,yes,K15_4,8.07,passed all filters,7.5
+M16_00144,9,1,yes,M16_5,8.49,passed all filters,7.5
+K01_00188,9,1,yes,K01_8,7.6,passed all filters,7
+M09_00338,9,1,yes,M09_4,9.13,passed all filters,8.5
+M09_00477,9,1,yes,M09_7,9.58,passed all filters,9
+K12_00097,9,1,yes,K12_7-K14_4,8.54,passed all filters,8
+K01_00126,8,1,no,NA,NA,all log10LRs < 1.5,NA
+M18_00005,5,1,yes,M09_3,3.01,passed all filters,2.5
+N08_00031,9,1,yes,N08_3,11.46,passed all filters,10.5
+N15_00028,9,1,yes,N15_3,8.6,passed all filters,8
+K12_00147,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00081,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S14_00051,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00242,9,2,yes,K05_1,8.77,passed all filters,8
+N13_00022,9,1,yes,N13_5,8.6,passed all filters,8
+M13_00136,1,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles,NA
+N13_00053,9,1,yes,N13_5,8.6,passed all filters,8
+N04_00015,9,1,yes,N04_2,8.18,passed all filters,7.5
+M15_00223,9,1,yes,M15_4,11.52,passed all filters,11
+N14_00038,6,1,no,NA,NA,> min NOC matches,3
+K01_00123,9,1,yes,K01_5,9.16,passed all filters,8.5
+M09_00472,9,1,yes,M09_13,10.29,passed all filters,9.5
+S17_00001,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M17_00127,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00198,9,2,yes,K05_4,10.1,passed all filters,6.5
+K05_00198,9,2,yes,K05_6,7.13,passed all filters,6.5
+M09_00327,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00117,9,1,yes,S02_4,9.92,passed all filters,9
+M17_00095,9,1,yes,M17_4,9.25,passed all filters,8.5
+M09_00473,9,1,yes,M09_7,9.58,passed all filters,9
+M16_00173,9,1,yes,M16_5,8.49,passed all filters,7.5
+S02_00069,9,1,yes,S02_7,8.1,passed all filters,7.5
+K09_00061,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S11_00030,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S13_00021,9,2,yes,S13_3,5.91,passed all filters,5
+S13_00021,9,2,yes,S13_5,7.86,passed all filters,5
+M17_00075,9,1,yes,M17_4,9.25,passed all filters,8.5
+M07_0475,9,2,yes,M07_2,7.65,passed all filters,7
+M07_0475,9,2,yes,M07_3,9.64,passed all filters,7
+M17_00183,9,1,yes,M17_2,11.13,passed all filters,10.5
+K15_00040,9,1,yes,K15_1,8.69,passed all filters,8
+N04_00013,9,1,yes,N04_5,9.91,passed all filters,9
+K02_00207,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K10_00117,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M06_0206,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00319,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L08_00011,9,1,yes,L08_7,13.39,passed all filters,12.5
+K02_00216,9,1,yes,K02_5,8.91,passed all filters,8
+M09_00310,9,2,yes,M09_12,8.01,passed all filters,7.5
+M09_00310,9,2,yes,M09_13,10.09,passed all filters,7.5
+M17_00162,2,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+N10_00007,9,1,yes,N10_1,9.25,passed all filters,8.5
+S05_00048,9,1,yes,S05_4,10.74,passed all filters,10
+M01_00179,9,1,yes,M01_6,9.61,passed all filters,9
+M14_00122,9,1,yes,N13_5,8.6,passed all filters,8
+K05_00218,9,1,yes,K05_3,8.82,passed all filters,8
+M01_00343,9,1,yes,M01_5,8.96,passed all filters,8
+S10_00106,1,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+S02_00103,9,1,yes,S02_7,8.1,passed all filters,7.5
+K05_00310,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K11_00093,9,1,yes,K11_3,11.74,passed all filters,11
+N14_00045,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N13_00057,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00198,9,1,yes,M16_5,8.49,passed all filters,7.5
+M05_00105,9,1,yes,M05_3,9.78,passed all filters,9
+K16_00017,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K10_00081,9,2,yes,K10_2,10.81,passed all filters,10
+K15_00027,9,1,yes,K15_1,8.69,passed all filters,8
+M06_00108,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N13_00028,9,1,yes,N13_5,8.6,passed all filters,8
+S02_00100,9,1,yes,S02_4,9.92,passed all filters,9
+M03_0157,9,1,no,NA,NA,all log10LRs < 1.5,NA
+N11_00011,9,1,yes,N11_16,8.9,passed all filters,8
+M09_0384,9,1,yes,M14_6,7.36,passed all filters,6.5
+S14_00030,9,1,yes,S14_4,7.39,passed all filters,6.5
+K05_00174,9,1,yes,K05_7,10.62,passed all filters,10
+M07_0610,9,1,yes,M07_10,10.11,passed all filters,9.5
+N15_00043,9,1,yes,N15_4,11.03,passed all filters,10.5
+N04_00022,9,1,yes,N04_5,9.91,passed all filters,9
+M01_00335,9,1,yes,M01_5,8.96,passed all filters,8
+S02_00064,9,1,yes,S02_7,8.1,passed all filters,7.5
+K05_00243,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K11_00066,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M06_00116,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L18_00013,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M01_0404,9,1,yes,M01_2,8.24,passed all filters,7.5
+M03_00088,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S16_00013,9,2,yes,S16_6,5.51,passed all filters,5
+M16_00335,9,1,yes,M16_8,9.01,passed all filters,8.5
+S04_00074,9,1,yes,S04_7,11.09,passed all filters,10.5
+K02_00127,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00223,9,1,yes,M16_5,8.49,passed all filters,7.5
+K13_00096,9,1,yes,K16_5,9.65,passed all filters,9
+M04_00103,9,1,yes,K15_4,8.07,passed all filters,7.5
+N08_00033,9,1,yes,N08_1,10.06,passed all filters,9.5
+S02_00093,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S06_00046,9,2,yes,S06_5,4.58,passed all filters,4
+S06_00046,9,2,yes,S06_6,8.23,passed all filters,4
+N03_00021,9,1,yes,N03_3,7.86,passed all filters,7
+M01_00355,9,2,yes,M01_4,6.26,passed all filters,5.5
+M01_00355,9,2,yes,M01_6,8.42,passed all filters,5.5
+K13_00187,9,2,yes,K13_3,6.09,passed all filters,3.5
+K13_00187,9,2,yes,K13_15-K16_3,4.12,passed all filters,3.5
+K05_00318,9,1,yes,K05_3,8.82,passed all filters,8
+S04_00073,9,1,yes,S04_12,8.31,passed all filters,7.5
+S08_00035,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0455,5,1,no,NA,NA,> min NOC matches,2.5
+M13_00146,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S05_00043,9,1,yes,S05_4,10.74,passed all filters,10
+L12_00016,9,1,yes,L12_3,9.34,passed all filters,8.5
+N04_00023,9,1,yes,N04_5,9.91,passed all filters,9
+K01_00132,9,1,yes,K01_5,9.16,passed all filters,8.5
+N13_00058,9,1,yes,N13_5,8.6,passed all filters,8
+S04_00138,9,1,yes,S04_4,9.02,passed all filters,8.5
+M18_00010,9,1,yes,M18_2,10.25,passed all filters,9.5
+N11_00021,9,1,yes,N11_22,12.15,passed all filters,11.5
+K15_00039,9,1,yes,K15_1,8.69,passed all filters,8
+S09_00065,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_0280,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00192,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00039,9,1,yes,M17_3,10.38,passed all filters,9.5
+N15_00032,9,1,yes,N15_3,8.6,passed all filters,8
+M03_00137,9,1,yes,M03_1,8.45,passed all filters,7.5
+K13_00165,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00101,9,1,yes,S02_4,9.92,passed all filters,9
+M04_00097,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S08_00036,9,1,yes,S08_3,9.89,passed all filters,9
+M17_00160,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00340,9,2,yes,M16_8,7.5,passed all filters,7
+S02_00088,9,1,yes,S02_7,8.1,passed all filters,7.5
+M06_00104,3,1,no,NA,NA,all log10LRs < 1.5,NA
+M05_00094,4,1,yes,M13_2,2.92,passed all filters,2
+M07_00449,9,1,yes,M07_10,10.11,passed all filters,9.5
+M07_0616,9,1,yes,M07_1,10.64,passed all filters,10
+K13_00161,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K16_00003,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_0285,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0479,9,1,yes,M07_1,10.64,passed all filters,10
+M16_00112,9,1,yes,M16_5,8.49,passed all filters,7.5
+M07_0483,9,1,yes,M07_2,10.19,passed all filters,9.5
+S02_00123,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00216,9,1,yes,K05_3,8.82,passed all filters,8
+M14_00151,9,1,yes,M14_6,7.36,passed all filters,6.5
+S04_00123,9,2,yes,S04_6,5.35,passed all filters,4
+S04_00123,9,2,yes,S04_8,4.8,passed all filters,4
+M01_00192,9,2,yes,M01_3,6.72,passed all filters,5.5
+M01_00192,9,2,yes,M01_6,6.46,passed all filters,5.5
+M17_00071,9,1,yes,M17_4,9.25,passed all filters,8.5
+N14_00008,9,1,yes,N14_3,10.21,passed all filters,9.5
+M07_00450,9,1,yes,M07_7,13.51,passed all filters,13
+L18_00021,5,2,no,NA,NA,> min NOC matches,2
+M07_00413,9,1,yes,M07_1,10.64,passed all filters,10
+N16_00008,9,1,yes,K15_4,8.04,passed all filters,7.5
+S05_00041,9,1,yes,S05_4,10.74,passed all filters,10
+K05_00217,9,1,yes,K05_3,8.82,passed all filters,8
+N15_00012,9,1,yes,N15_3,8.6,passed all filters,8
+M06_0221,9,1,yes,M06_3,7.65,passed all filters,7
+M07_0456,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0546,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00437,9,2,yes,M07_7,8.53,passed all filters,7
+M07_00437,9,2,yes,M07_10,7.56,passed all filters,7
+S02_00131,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00016,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S09_00069,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00084,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0481,9,1,yes,M07_2,10.19,passed all filters,9.5
+N08_00024,9,1,yes,N08_3,11.46,passed all filters,10.5
+M17_00128,9,1,yes,M01_5,8.93,passed all filters,8
+K13_00095,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00313,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+M09_00350,9,1,yes,M09_8,10.06,passed all filters,9.5
+M16_00294,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K01_00179,9,1,yes,K01_5,9.16,passed all filters,8.5
+M09_00340,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N13_00061,1,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles,NA
+N03_00005,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K10_00069,9,2,yes,K10_3,6.49,passed all filters,4.5
+K10_00069,9,2,yes,K10_5,5.29,passed all filters,4.5
+M09_0407,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00069,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00465,6,2,yes,L08_1,3.54,passed all filters,2
+M09_00465,6,2,yes,M09_4,2.85,passed all filters,2
+S02_00146,9,1,yes,S02_4,9.92,passed all filters,9
+M03_00106,9,1,yes,M03_1,8.45,passed all filters,7.5
+S14_00026,9,1,yes,S14_6,7.42,passed all filters,6.5
+K05_00176,9,1,yes,K05_4,10.12,passed all filters,9.5
+M01_00345,9,2,yes,M01_6,7.33,passed all filters,6.5
+L16_00041,9,1,yes,K05_3,7.79,passed all filters,7
+K02_00166,9,1,yes,K02_5,8.91,passed all filters,8
+N15_00009,9,1,yes,N15_3,8.6,passed all filters,8
+K03_00101,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L01_00011,9,1,yes,L01_1,9.68,passed all filters,9
+N13_00019,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M01_00191,9,2,yes,M01_7,9.02,passed all filters,8.5
+L02_00008,2,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles,NA
+M09_0375,9,1,yes,M09_7,9.58,passed all filters,9
+M17_00020,9,1,yes,M17_3,10.38,passed all filters,9.5
+K11_00042,9,2,yes,K11_3,7.96,passed all filters,7
+K11_00042,9,2,yes,K11_4,7.52,passed all filters,7
+M03_00168,9,1,yes,K15_1,8.69,passed all filters,8
+M07_0601,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+S02_00065,9,2,yes,S02_4,8.68,passed all filters,6.5
+S02_00065,9,2,yes,S02_7,7.12,passed all filters,6.5
+S09_00066,4,1,no,NA,NA,all log10LRs NA or Inf,NA
+L18_00017,9,2,yes,L18_6,8.94,passed all filters,1
+L18_00017,9,2,yes,L05_12,1.68,passed all filters,1
+M09_00347,9,2,yes,M09_7,9.58,passed all filters,9
+S02_00077,9,1,yes,S02_7,8.1,passed all filters,7.5
+K02_00147,9,1,yes,K02_10,8.57,passed all filters,8
+K03_00080,9,1,yes,K03_6,9.96,passed all filters,9
+M07_0614,9,1,no,NA,NA,all log10LRs < 1.5,NA
+S10_00046,9,1,yes,S10_8,9.8,passed all filters,9
+M16_00154,9,2,yes,M16_3,8.07,passed all filters,2.5
+M16_00154,9,2,yes,M16_4,3.31,passed all filters,2.5
+M17_00118,9,1,yes,M17_4,9.25,passed all filters,8.5
+K01_00102,9,2,no,NA,NA,> min NOC matches,5.5
+K01_00105,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K12_00104,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M12_00034,9,1,yes,M12_16,11.83,passed all filters,11
+N11_00013,9,1,yes,N11_5,8.3,passed all filters,7.5
+K02_00149,9,1,yes,K02_10,8.57,passed all filters,8
+M09_0405,9,1,yes,M14_6,7.36,passed all filters,6.5
+S02_00118,9,1,yes,S02_4,9.92,passed all filters,9
+S02_00147,9,1,yes,S02_4,9.92,passed all filters,9
+S04_00116,8,1,yes,S04_8,9.27,passed all filters,8.5
+N15_00017,9,1,yes,N15_3,8.6,passed all filters,8
+K01_00168,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S09_00067,9,1,yes,S09_8,8.9,passed all filters,8
+N03_00008,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00359,9,1,yes,M01_5,8.79,passed all filters,8
+N13_00038,9,1,yes,N13_5,8.6,passed all filters,8
+S07_00011,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0458,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0366,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M13_00162,2,1,no,NA,NA,all log10LRs NA or Inf,NA
+S14_00020,4,2,no,NA,NA,> min NOC matches,1.5
+S14_00028,9,1,yes,S14_6,7.42,passed all filters,6.5
+K13_00145,9,2,yes,K13_3,10.07,passed all filters,9.5
+N13_00056,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K11_00088,9,1,yes,K11_4,11.3,passed all filters,10.5
+K02_00230,9,1,yes,K02_5,8.91,passed all filters,8
+M09_0447,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N08_00005,9,1,yes,N08_1,10.06,passed all filters,9.5
+K13_00118,4,1,no,NA,NA,> min NOC matches,8.5
+K12_00139,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N15_00019,9,1,yes,N15_3,8.6,passed all filters,8
+L14_00001,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0606,9,3,yes,M07_10,2.86,passed all filters,2
+K09_00060,7,2,yes,K09_7,4.44,passed all filters,3.5
+N13_00023,9,1,yes,N13_3,9.29,passed all filters,8.5
+S16_00030,9,1,yes,S16_4,8.09,passed all filters,7.5
+M01_00363,9,1,yes,M01_3,9.88,passed all filters,9
+S14_00086,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00416,9,2,yes,M07_1,10.09,passed all filters,5.5
+M07_00416,9,2,yes,M07_2,6.07,passed all filters,5.5
+M16_00344,9,1,yes,M16_4,9.23,passed all filters,8.5
+M01_00341,9,1,yes,M01_5,8.96,passed all filters,8
+K10_00087,9,2,yes,K10_1,8.13,passed all filters,6.5
+K10_00087,9,2,yes,K10_3,7.14,passed all filters,6.5
+M13_00156,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_00131,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+M17_00172,8,1,yes,M17_4,7.97,passed all filters,7
+N13_00063,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00081,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M06_00109,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K02_00219,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K02_00185,9,1,yes,K02_7,8.8,passed all filters,8
+K10_00114,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00011,9,2,yes,M17_4,9.25,passed all filters,8.5
+N14_00052,9,1,yes,N14_3,10.21,passed all filters,9.5
+N11_00008,9,1,yes,N11_5,8.3,passed all filters,7.5
+S02_00072,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00082,9,1,yes,L04_3,7.77,passed all filters,7
+K02_00126,9,1,yes,K02_6,7.77,passed all filters,7
+K13_00211,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00091,9,2,yes,K13_3,8.67,passed all filters,6
+K13_00091,9,2,yes,K13_15-K16_3,6.86,passed all filters,6
+K05_00211,9,1,yes,K05_3,8.82,passed all filters,8
+M09_00451,9,1,yes,M09_4,9.13,passed all filters,8.5
+K13_00094,9,1,yes,K16_4,9.32,passed all filters,8.5
+S14_00027,9,1,yes,S14_13,8.61,passed all filters,8
+K04_00045,9,1,yes,K04_2,8.86,passed all filters,8
+S16_00033,9,1,yes,S16_3,10.46,passed all filters,9.5
+K02_00168,9,1,yes,K02_6,7.77,passed all filters,7
+N15_00040,9,1,yes,N15_5,9,passed all filters,8.5
+K01_00194,6,1,no,NA,NA,all log10LRs < 1.5,NA
+K13_00120,9,1,yes,K13_15-K16_3,7.89,passed all filters,7
+S02_00096,9,1,yes,S02_7,8.1,passed all filters,7.5
+M06_00129,9,2,yes,M06_1,9.55,passed all filters,9
+K05_00181,9,1,yes,K05_3,8.82,passed all filters,8
+N13_00018,9,1,yes,N13_3,9.29,passed all filters,8.5
+S10_00092,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K15_00052,9,2,yes,K15_4,6.73,passed all filters,6
+K15_00052,9,2,yes,K15_3,7.11,passed all filters,6
+S04_00109,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M16_00240,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M07_00440,8,1,yes,M07_2,6.16,passed all filters,5.5
+L16_00023,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00332,9,2,yes,M16_5,7.35,passed all filters,6
+M16_00332,9,2,yes,M16_8,6.66,passed all filters,6
+M16_00236,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L08_00003,9,1,yes,L08_5,9.93,passed all filters,9
+N04_00016,9,1,yes,N04_2,8.18,passed all filters,7.5
+K02_00221,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K12_00148,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N08_00030,9,1,yes,N08_1,10.06,passed all filters,9.5
+K01_00187,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00131,9,1,yes,K01_4,8.49,passed all filters,7.5
+S14_00059,9,1,yes,S14_4,7.39,passed all filters,6.5
+M07_00442,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K15_00011,9,1,yes,K15_3,9.09,passed all filters,8.5
+M09_00321,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0449,9,2,yes,M09_4,8.96,passed all filters,8
+S14_00062,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M06_0223,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00045,9,1,yes,M17_3,10.38,passed all filters,9.5
+M09_0361,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00172,9,1,yes,M16_2,10.62,passed all filters,10
+M17_00126,9,1,yes,M17_4,9.24,passed all filters,8.5
+K05_00167,9,1,yes,K05_1,9.99,passed all filters,9
+M16_00359,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S14_00029,9,1,yes,S14_5,8.74,passed all filters,8
+K12_00138,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+M09_0363,6,2,yes,M09_8,4.75,passed all filters,4
+K01_00110,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K12_00123,9,2,yes,K12_4,7.75,passed all filters,6.5
+K12_00123,9,2,yes,K12_5,7.29,passed all filters,6.5
+M03_00170,9,1,yes,M03_1,8.45,passed all filters,7.5
+M05_00132,9,1,yes,M05_1,9.07,passed all filters,8.5
+M07_0615,9,2,yes,M07_10,9.18,passed all filters,8.5
+N11_00025,9,1,yes,N11_5,8.3,passed all filters,7.5
+K02_00125,9,1,yes,K02_6,7.77,passed all filters,7
+M09_0353,9,1,yes,M09_13,10.29,passed all filters,9.5
+M16_00227,9,1,yes,M16_5,8.49,passed all filters,7.5
+K04_00054,9,1,yes,K04_5,8.41,passed all filters,7.5
+M09_XX356,9,1,yes,M09_4,9.13,passed all filters,8.5
+M17_00100,9,1,yes,M17_4,9.25,passed all filters,8.5
+M03_00113,9,1,yes,M03_2,10.43,passed all filters,9.5
+M07_0570,9,1,yes,M07_10,10.11,passed all filters,9.5
+M01_00395,9,1,yes,M01_6,9.61,passed all filters,9
+N09_00011,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00433,9,2,yes,M07_1,7.25,passed all filters,6
+M07_00433,9,2,yes,M07_2,6.77,passed all filters,6
+M16_00231,8,1,yes,M16_4,3.89,passed all filters,3
+K05_00154,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K07_00134,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L05_00020,9,1,yes,L05_4,9.69,passed all filters,9
+K10_00113,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00316,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N16_00003,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00119,9,1,yes,M16_5,8.49,passed all filters,7.5
+K10_00097,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00524,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S14_00022,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K04_00026,9,1,yes,K04_4,9.26,passed all filters,8.5
+K05_00235,9,1,yes,K05_5,8.51,passed all filters,8
+M17_00067,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K11_00087,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S06_00047,9,1,yes,S06_5,8.1,passed all filters,7.5
+M09_00510,9,1,yes,M09_4,9.13,passed all filters,8.5
+N16_00005,9,1,yes,N16_3,8.21,passed all filters,7.5
+M09_0420,9,1,yes,M09_4,9.13,passed all filters,8.5
+L09_00005,9,2,yes,L09_7,5.63,passed all filters,5
+M09_00315,9,1,no,NA,NA,all log10LRs < 1.5,NA
+S17_00002,9,1,yes,S17_1,10.3,passed all filters,9.5
+K05_00175,9,1,yes,K05_1,9.99,passed all filters,9
+M17_00158,5,1,no,NA,NA,all log10LRs < 1.5,NA
+M09_XX351,9,1,yes,M09_7,9.58,passed all filters,9
+S16_00034,9,1,yes,S16_5,10.55,passed all filters,10
+K12_00106,8,1,yes,K12_7-K14_4,6.91,passed all filters,6
+M16_00237,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K15_00057,9,1,yes,K15_1,8.69,passed all filters,8
+S01_00124,9,1,yes,S01_3,9,passed all filters,8.5
+M09_XX365,9,1,yes,M09_4,9.13,passed all filters,8.5
+K02_00208,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00318,9,1,yes,M09_1,10.36,passed all filters,9.5
+M13_00174,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S04_00097,9,1,no,NA,NA,all log10LRs < 1.5,NA
+S05_00059,9,1,yes,S05_2,8.79,passed all filters,8
+K13_00079,9,2,yes,K16_4,9.32,passed all filters,1.5
+K13_00079,9,2,yes,K11_8,2.23,passed all filters,1.5
+L02_00002,9,1,yes,L02_3,9.28,passed all filters,8.5
+M04_00109,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L12_00020,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K12_00107,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_00130,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K15_00058,8,5,no,NA,NA,all log10LRs < 1.5,NA
+M17_00040,9,1,yes,M17_3,10.38,passed all filters,9.5
+S14_00069,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_00178,9,1,yes,M03_1,8.45,passed all filters,7.5
+M07_00446,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N16_00051,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S04_00111,6,2,yes,S01_15,1.44,passed all filters,1
+S04_00111,6,2,yes,S04_8,1.73,passed all filters,1
+M17_00112,9,1,yes,M17_4,9.25,passed all filters,8.5
+K05_00321,9,1,yes,K05_3,7.02,passed all filters,6.5
+M09_00337,9,1,yes,M09_4,9.13,passed all filters,8.5
+M09_0374,9,1,yes,M09_8,10.06,passed all filters,9.5
+K12_00118,9,1,yes,K12_4,9.34,passed all filters,8.5
+M06_0215,9,1,yes,M06_1,10.08,passed all filters,9.5
+S05_00061,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0608,9,1,yes,M07_10,10.11,passed all filters,9.5
+N11_00016,6,1,yes,N11_5,3.96,passed all filters,3
+S16_00008,9,1,yes,S16_5,10.55,passed all filters,10
+S04_00100,9,1,yes,S04_8,10.31,passed all filters,9.5
+M09_0378,9,1,yes,M09_3,9.91,passed all filters,9
+N11_00022,9,1,yes,N11_16,8.9,passed all filters,8
+M17_00130,9,1,yes,M17_4,9.25,passed all filters,8.5
+K10_00108,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L16_00040,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00525,9,2,yes,M09_7,7.3,passed all filters,6.5
+M09_00525,9,2,yes,M09_13,8.03,passed all filters,6.5
+M16_00295,9,1,yes,M16_6,10.82,passed all filters,10
+N15_00020,9,1,yes,N15_3,8.6,passed all filters,8
+M06_0200,9,1,yes,M06_1,10.08,passed all filters,9.5
+M03_00112,9,1,yes,M03_1,8.45,passed all filters,7.5
+K05_00186,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+S10_00107,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00073,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K02_00210,9,2,yes,K02_7,4.93,passed all filters,4
+K11_00091,9,2,yes,K11_5-K13_12,7.84,passed all filters,7
+K11_00091,9,2,yes,K11_7,8.14,passed all filters,7
+M07_0577,9,2,yes,M07_10,10.06,passed all filters,9.5
+M07_00435,9,1,no,NA,NA,all log10LRs < 1.5,NA
+S10_00086,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00035,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S14_00061,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00110,9,1,yes,S02_7,8.1,passed all filters,7.5
+M16_00230,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L09_00031,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N08_00027,9,1,yes,N08_3,11.41,passed all filters,10.5
+M06_0214,9,1,yes,M06_1,10.08,passed all filters,9.5
+M07_0548,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00336,9,1,yes,M01_5,8.96,passed all filters,8
+M16_00331,9,1,yes,M16_5,8.49,passed all filters,7.5
+S04_00115,9,2,yes,S04_8,7.14,passed all filters,5
+S04_00115,9,2,yes,S04_4,5.86,passed all filters,5
+K10_00076,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M05_00147,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00412,9,2,yes,M07_10,8.27,passed all filters,7.5
+N09_00005,9,1,yes,N09_1,8.8,passed all filters,8
+N14_00046,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S01_00101,9,1,yes,S01_2,8.22,passed all filters,7.5
+K09_00043,9,1,yes,K09_12,10.2,passed all filters,9.5
+M01_00390,9,2,yes,M01_4,6.95,passed all filters,6
+M01_00390,9,2,yes,M01_11,8.34,passed all filters,6
+M01_0413,9,1,yes,M01_5,8.96,passed all filters,8
+S09_00063,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00205,9,1,yes,K05_6,8.37,passed all filters,7.5
+S09_00068,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S11_00029,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+K05_00148,9,1,yes,K05_3,8.82,passed all filters,8
+K07_00126,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00370,9,1,yes,M01_5,8.96,passed all filters,8
+M16_00336,9,1,yes,M16_8,9.02,passed all filters,8.5
+L18_00005,9,2,yes,L18_2,9.02,passed all filters,8.5
+L05_00033,9,1,yes,L05_6,8.54,passed all filters,8
+K03_00093,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N13_00005,9,1,yes,N13_5,8.6,passed all filters,8
+M18_00003,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00164,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00349,9,2,yes,M09_8,10,passed all filters,9.5
+M01_00396,9,2,no,NA,NA,> min NOC matches,6.5
+L07_00001,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L09_00016,9,1,yes,L09_3,7.72,passed all filters,7
+M07_00427,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00088,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M05_00144,7,1,no,NA,NA,all log10LRs < 1.5,NA
+M06_00133,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0477,9,1,yes,M07_2,10.19,passed all filters,9.5
+N04_00012,9,1,yes,N04_3,8.1,passed all filters,7.5
+M16_00161,9,1,yes,M16_3,10.59,passed all filters,10
+M06_0224,9,1,yes,M06_2,9.91,passed all filters,9
+S10_00047,9,1,yes,S10_8,9.8,passed all filters,9
+M09_00316,9,2,yes,M09_3,9.71,passed all filters,9
+S10_00044,9,1,yes,S10_7,9,passed all filters,8.5
+S09_00050,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K05_00232,9,1,yes,K05_5,8.51,passed all filters,8
+K15_00031,9,1,yes,K15_1,8.69,passed all filters,8
+M09_00317,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M17_00038,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00067,9,1,yes,S02_7,8.1,passed all filters,7.5
+K13_00137,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+M09_00344,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M17_00090,9,1,yes,M17_4,9.25,passed all filters,8.5
+N08_00032,9,1,yes,N08_3,11.46,passed all filters,10.5
+K10_00106,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_0152,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00335,4,1,no,NA,NA,all log10LRs < 1.5,NA
+L05_00018,9,1,yes,L14_1,9.31,passed all filters,8.5
+K09_00055,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0470,9,1,yes,M07_2,10.19,passed all filters,9.5
+K13_00155,3,1,no,NA,NA,> min NOC matches,8
+M03_00107,9,1,yes,M03_1,8.45,passed all filters,7.5
+M09_0381,9,1,yes,M09_4,9.13,passed all filters,8.5
+M09_0356,2,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+S10_00038,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_00185,9,1,yes,M03_1,8.45,passed all filters,7.5
+M05_00095,9,1,yes,M05_3,9.78,passed all filters,9
+S10_00087,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00197,9,1,yes,M16_5,8.49,passed all filters,7.5
+M17_00182,9,1,yes,M17_4,9.25,passed all filters,8.5
+M09_0362,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K15_00055,9,1,yes,K15_4,8.07,passed all filters,7.5
+S16_00010,9,1,yes,S16_5,10.55,passed all filters,10
+M16_00160,9,1,yes,M16_3,10.59,passed all filters,10
+S02_00113,9,2,yes,S02_4,7.59,passed all filters,7
+L01_00006,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00164,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00083,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K01_00108,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00165,9,1,yes,M16_3,10.59,passed all filters,10
+S02_00107,9,1,yes,S02_4,9.92,passed all filters,9
+M17_00138,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00183,9,2,yes,K13_15-K16_3,7.91,passed all filters,7
+M16_00357,9,1,yes,M16_4,9.23,passed all filters,8.5
+S14_00017,9,1,yes,S14_2,9.68,passed all filters,9
+M17_00065,9,1,yes,M17_4,9.25,passed all filters,8.5
+K02_00124,9,1,yes,K02_5,8.91,passed all filters,8
+M09_00478,9,1,yes,M09_7,9.58,passed all filters,9
+M17_00132,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00195,9,1,yes,M01_6,9.61,passed all filters,9
+S02_00099,9,1,yes,S02_4,9.87,passed all filters,9
+M17_00035,9,1,yes,M17_3,10.38,passed all filters,9.5
+M01_00161,9,1,yes,M01_4,9.58,passed all filters,9
+K15_00023,9,1,yes,K15_3,2.64,passed all filters,2
+M17_00150,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_0579,9,1,yes,M07_2,10.19,passed all filters,9.5
+M09_00541,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00149,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00078,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L12_00021,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00398,9,1,yes,M01_5,8.96,passed all filters,8
+M07_0480,9,1,yes,M07_1,10.64,passed all filters,10
+S04_00093,9,2,yes,S04_8,3.26,passed all filters,2.5
+S04_00093,9,2,yes,S04_12,8.14,passed all filters,2.5
+K02_00206,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K12_00146,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L05_00019,9,1,yes,L05_7,7.85,passed all filters,7
+S02_00124,9,2,yes,S02_3,8.73,passed all filters,4
+S02_00124,9,2,yes,S02_5,4.78,passed all filters,4
+K05_00194,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S05_00046,9,1,yes,S05_5,10.21,passed all filters,9.5
+M05_00139,9,1,yes,M05_3,9.78,passed all filters,9
+K05_00203,9,1,yes,K05_4,10.12,passed all filters,9.5
+M01_00356,9,1,yes,M01_5,8.96,passed all filters,8
+N13_00024,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0396,9,1,yes,M14_6,7.36,passed all filters,6.5
+N15_00030,9,1,yes,N15_3,8.6,passed all filters,8
+K05_00145,9,1,yes,K05_3,8.82,passed all filters,8
+K14_00076,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00213,9,1,yes,K05_3,8.82,passed all filters,8
+L09_00017,9,1,yes,L09_9,10.97,passed all filters,10
+M03_00108,9,2,yes,M03_2,8.13,passed all filters,6
+M03_00108,9,2,yes,M03_3,6.68,passed all filters,6
+M09_00346,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K05_00233,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00115,9,1,yes,M17_4,9.25,passed all filters,8.5
+L02_00047,9,2,no,NA,NA,all log10LRs < 1.5,NA
+S04_00075,9,1,yes,S04_1,9.4,passed all filters,8.5
+L08_00027,9,1,yes,L08_6,8.46,passed all filters,7.5
+K11_00039,1,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+M17_00073,9,1,yes,M17_4,9.25,passed all filters,8.5
+S14_00021,9,1,yes,S14_4,7.39,passed all filters,6.5
+K01_00120,9,2,yes,K01_4,8.21,passed all filters,7.5
+M07_00443,9,1,yes,M07_7,13.51,passed all filters,13
+M16_00162,7,1,yes,M16_3,4.86,passed all filters,4
+M17_00114,9,1,yes,M17_4,9.25,passed all filters,8.5
+S08_00033,9,1,yes,S08_7,11.16,passed all filters,10.5
+K02_00133,9,2,yes,K02_8,4.17,passed all filters,3.5
+K02_00133,9,2,yes,K02_13,6.38,passed all filters,3.5
+M09_0368,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+K02_00220,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K03_00102,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0372,9,1,yes,M09_8,10.06,passed all filters,9.5
+S05_00044,9,1,yes,S05_9,8.42,passed all filters,7.5
+L08_00028,9,2,yes,L08_7,13.39,passed all filters,12.5
+M03_0154,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00445,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S14_00068,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00234,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00135,1,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+N13_00043,9,1,yes,N13_5,8.6,passed all filters,8
+S04_00087,9,1,yes,S04_6,7.56,passed all filters,7
+S02_00086,9,2,yes,S02_4,7.46,passed all filters,6.5
+L18_00020,9,1,yes,L18_6,8.94,passed all filters,8
+M09_0397,9,2,yes,M09_4,5.2,passed all filters,4.5
+M09_0397,9,2,yes,M09_12,8.59,passed all filters,4.5
+M09_XX354,9,1,yes,M09_7,9.58,passed all filters,9
+M16_00264,9,1,yes,M16_4,9.23,passed all filters,8.5
+M07_0516,9,1,no,NA,NA,all log10LRs < 1.5,NA
+N04_00008,9,1,yes,N04_3,8.1,passed all filters,7.5
+K12_00100,9,1,yes,K12_7-K14_4,8.54,passed all filters,8
+K12_00135,2,1,no,NA,NA,all log10LRs NA or Inf,NA
+M09_0444,6,1,no,NA,NA,> min NOC matches,3
+K09_00062,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00410,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00323,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0367,9,1,yes,M09_7,9.58,passed all filters,9
+M13_00165,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K17_00003,9,1,yes,K17_1,8.14,passed all filters,7.5
+M09_0438,9,2,yes,M09_3,5.96,passed all filters,5
+M09_00464,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0373,9,1,yes,M09_7,9.58,passed all filters,9
+M09_0445,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L02_00005,9,1,yes,L02_5,9.94,passed all filters,9
+S04_00114,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M09_0442,9,1,yes,M09_4,9.13,passed all filters,8.5
+M09_00462,4,2,yes,N09_1,9.68,passed all filters,9
+K10_00101,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_0153,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00485,9,2,yes,N03_3,8.96,passed all filters,1
+M09_00485,9,2,yes,N11_6,1.72,passed all filters,1
+K07_00094,9,1,yes,K07_11,10.3,passed all filters,9.5
+K05_00193,9,1,yes,K05_4,10.12,passed all filters,9.5
+N04_00011,9,1,yes,N04_6,8.7,passed all filters,8
+S09_00064,9,1,yes,S09_5,8.73,passed all filters,8
+K02_00122,9,1,yes,K02_6,7.77,passed all filters,7
+M01_0414,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00109,9,1,yes,S02_4,9.92,passed all filters,9
+K01_00129,9,1,yes,K01_5,9.16,passed all filters,8.5
+M09_00479,9,2,yes,M09_7,9.1,passed all filters,5.5
+M09_00479,9,2,yes,M09_13,6.26,passed all filters,5.5
+M01_00347,9,1,yes,M01_6,9.61,passed all filters,9
+S09_00075,9,1,yes,S09_1,9.8,passed all filters,9
+S14_00064,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00108,9,1,yes,S02_4,9.92,passed all filters,9
+K10_00107,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S13_00022,9,2,yes,S13_3,8.66,passed all filters,4
+S13_00022,9,2,yes,S13_5,4.61,passed all filters,4
+K04_00025,9,2,yes,K04_2,7.24,passed all filters,6.5
+K04_00025,9,2,yes,K04_5,7.1,passed all filters,6.5
+K13_00180,9,2,yes,K13_3,9.92,passed all filters,9
+M16_00242,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00095,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K10_00096,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S04_00108,9,1,yes,S04_6,7.55,passed all filters,7
+K02_00157,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00345,9,1,yes,M14_6,7.36,passed all filters,6.5
+K13_00130,9,1,yes,K13_3,10.07,passed all filters,9.5
+S02_00116,9,1,yes,S02_7,8.1,passed all filters,7.5
+L19_00001,9,1,yes,L19_1,9.46,passed all filters,8.5
+M17_00133,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N16_00001,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N15_00015,9,1,yes,N15_3,8.6,passed all filters,8
+S05_00039,9,1,yes,S05_3,9.39,passed all filters,8.5
+M09_00313,9,1,yes,M09_13,10.29,passed all filters,9.5
+K02_00144,9,1,yes,K02_6,7.77,passed all filters,7
+M07_0542,9,1,yes,M07_10,10.11,passed all filters,9.5
+L04_00010,9,1,yes,L04_3,8.64,passed all filters,8
+M09_00463,9,2,yes,M09_4,8.44,passed all filters,7.5
+S04_00113,9,1,yes,S04_8,10.32,passed all filters,9.5
+M01_0417,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M01_00344,9,1,yes,M01_1,9.96,passed all filters,9
+M16_00233,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K10_00102,9,3,no,NA,NA,> min NOC matches,1
+M17_00148,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+L01_00008,9,1,yes,L01_1,9.68,passed all filters,9
+M17_00107,9,1,yes,M17_4,9.25,passed all filters,8.5
+M17_00066,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N15_00005,4,1,no,NA,NA,all log10LRs NA or Inf,NA
+K09_00044,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K15_00054,9,1,yes,K15_3,9.09,passed all filters,8.5
+L04_00012,6,1,no,NA,NA,all log10LRs < 1.5,NA
+M09_00328,9,3,yes,N15_3,4.81,passed all filters,4
+M09_00328,9,3,yes,M09_8,6.7,passed all filters,4
+K15_00030,9,1,yes,K15_1,8.69,passed all filters,8
+L02_00006,9,1,yes,L02_5,9.94,passed all filters,9
+M17_00144,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+M17_00092,9,1,yes,M17_4,9.25,passed all filters,8.5
+S04_00085,9,1,yes,S04_4,9.02,passed all filters,8.5
+M09_00507,2,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+K05_00210,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M03_00144,2,1,no,NA,NA,all log10LRs NA or Inf;no shared alleles;euroformix error,NA
+M17_00120,9,1,yes,M17_4,9.25,passed all filters,8.5
+N13_00037,9,1,yes,N13_5,8.6,passed all filters,8
+S02_00091,9,1,yes,S02_7,8.1,passed all filters,7.5
+M01_00373,3,1,no,NA,NA,all log10LRs NA or Inf,NA
+K05_00329,9,2,yes,K05_4,10.12,passed all filters,2
+K05_00329,9,2,yes,K05_5,2.54,passed all filters,2
+M16_00185,9,1,yes,M16_4,9.23,passed all filters,8.5
+M07_00407,9,1,no,NA,NA,all log10LRs < 1.5,NA
+S14_00060,9,1,yes,S14_4,7.39,passed all filters,6.5
+S01_00126,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K12_00172,9,1,yes,K12_4,9.34,passed all filters,8.5
+K05_00234,9,1,yes,K05_5,8.51,passed all filters,8
+M01_0401,9,1,yes,M01_5,8.96,passed all filters,8
+M07_0575,9,1,yes,M07_10,10.11,passed all filters,9.5
+M09_0371,9,1,yes,M09_8,10.06,passed all filters,9.5
+L05_00030,9,1,yes,L05_5,9.65,passed all filters,9
+N15_00039,9,1,yes,N15_5,9,passed all filters,8.5
+S04_00095,9,2,yes,S04_8,5.87,passed all filters,5
+M09_0370,9,1,yes,M09_7,9.58,passed all filters,9
+S01_00122,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00089,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00131,4,1,no,NA,NA,all log10LRs < 1.5,NA
+L16_00028,1,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+S10_00105,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00157,3,1,no,NA,NA,> min NOC matches,9.5
+M03_00114,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+N08_00004,6,1,no,NA,NA,all log10LRs < 1.5,NA
+M07_00448,9,1,yes,M07_7,10.13,passed all filters,9.5
+S02_00066,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00097,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00181,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S04_00092,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K13_00217,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M14_00123,9,1,yes,M14_6,7.36,passed all filters,6.5
+K01_00199,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K16_00016,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K03_00092,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S08_00042,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S09_00061,9,1,yes,S09_5,8.73,passed all filters,8
+S04_00126,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K13_00156,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M17_00105,9,1,yes,M17_4,9.25,passed all filters,8.5
+K05_00177,9,2,yes,K05_1,4.16,passed all filters,3.5
+K05_00177,9,2,yes,K05_7,9.82,passed all filters,3.5
+M16_00329,9,1,yes,M16_4,9.23,passed all filters,8.5
+M01_00339,9,1,yes,M01_3,9.88,passed all filters,9
+M17_00110,9,1,yes,M17_1,9.12,passed all filters,8.5
+K02_00134,9,1,yes,K02_7,8.8,passed all filters,8
+K11_00077,9,1,yes,K11_5-K13_12,10.97,passed all filters,10
+M06_0204,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_00486,9,1,yes,M09_4,9.13,passed all filters,8.5
+M17_00098,9,1,yes,M17_4,9.25,passed all filters,8.5
+K02_00209,9,1,no,NA,NA,all log10LRs < 1.5,NA
+N08_00021,9,1,yes,N08_3,11.46,passed all filters,10.5
+M16_00346,9,1,yes,M16_8,9.02,passed all filters,8.5
+S06_00054,9,1,yes,S06_6,8.23,passed all filters,7.5
+M16_00147,9,1,yes,M16_6,10.82,passed all filters,10
+L12_00022,9,1,yes,L12_3,9.34,passed all filters,8.5
+S04_00099,9,2,yes,S04_6,6.43,passed all filters,5.5
+S04_00099,9,2,yes,S04_8,7.9,passed all filters,5.5
+L08_00020,9,2,yes,L08_6,6.71,passed all filters,6
+L08_00020,9,2,yes,L08_9,8.57,passed all filters,6
+K01_00163,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M16_00324,9,1,yes,M16_8,9.02,passed all filters,8.5
+S01_00104,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S10_00101,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M13_00150,9,1,yes,M13_18,10.6,passed all filters,10
+M01_00388,9,1,yes,M01_5,8.96,passed all filters,8
+L18_00010,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K09_00063,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K04_00053,9,1,yes,K04_1,9.91,passed all filters,9
+K10_00100,7,1,no,NA,NA,all log10LRs NA or Inf,NA
+N03_00001,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M07_00422,9,1,yes,M07_7,13.51,passed all filters,13
+M07_0581,9,1,no,NA,NA,all log10LRs < 1.5,NA
+M09_0359,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S02_00073,8,2,no,NA,NA,all log10LRs NA or Inf,NA
+L03_00005,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+M09_0439,9,1,yes,M09_5,9.93,passed all filters,9
+K12_00142,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+S16_00043,9,1,yes,S16_3,10.46,passed all filters,9.5
+L16_00020,2,1,no,NA,NA,all log10LRs NA or Inf;euroformix error;no shared alleles,NA
+M06_0188,9,1,yes,M06_1,10.08,passed all filters,9.5
+S04_00094,9,1,yes,S04_8,10.32,passed all filters,9.5
+S02_00106,9,1,yes,S02_4,9.92,passed all filters,9
+K02_00229,0,0,no,NA,NA,all log10LRs NA or Inf;no peaks above threshold,NA
+K05_00173,9,2,yes,K05_1,9.79,passed all filters,9
+M05_00152,9,1,no,NA,NA,all log10LRs < 1.5,NA
+K13_00232,9,1,yes,K16_5,9.65,passed all filters,9

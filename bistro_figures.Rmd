@@ -1,0 +1,1005 @@
+---
+title: "bistro validation figures"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(ggpubr)
+library(ggupset)
+library(DiagrammeR)
+library(DiagrammeRsvg)
+library(rsvg)
+
+# set plotting theme
+theme_set(theme_bw() +
+  theme(
+    text = element_text(size = 15),
+    strip.background = element_rect(fill = "white", color = "white")
+  ))
+
+# matches
+provedit_exact_matches <- read_csv("output/provedit/exact_matches.csv") %>%
+  separate(human_id, sep = "-", into = c("proj1", "proj2", "id")) %>%
+  mutate(
+    id = ifelse(nchar(id) == 1, paste0("0", id), id),
+    human_id = ifelse(is.na(proj1), NA, paste0(proj1, "-", proj2, "-", id))
+  ) %>%
+  select(-c(proj1, proj2, id))
+
+provedit_similarity_matches <- read_csv("output/provedit/similarity_matches.csv") %>%
+  separate(human_id, sep = "-", into = c("proj1", "proj2", "id")) %>%
+  mutate(
+    id = ifelse(nchar(id) == 1, paste0("0", id), id),
+    human_id = ifelse(is.na(proj1), NA, paste0(proj1, "-", proj2, "-", id))
+  ) %>%
+  select(-c(proj1, proj2, id))
+
+provedit_similarity <- read_csv("output/provedit/human_similarities.csv")
+provedit_n_hu <- n_distinct(c(provedit_similarity$hu1, provedit_similarity$hu2))
+provedit_max_similarity <- provedit_similarity %>%
+  pull(similarity) %>%
+  max()
+
+provedit_bistro_matches <- read_csv("output/provedit/bistro_matches.csv") %>%
+  mutate(match = str_to_sentence(match)) %>%
+  mutate(incomplete = case_when(
+    locus_count == 15 ~ "Complete profile",
+    locus_count < 15 ~ "Incomplete profile"
+  ))
+
+provedit_thresh10_matches <- read_csv("output/provedit/bistro_log10LRs.csv") %>%
+  mutate(
+    match = ifelse(log10_lr >= 10 & !is.infinite(log10_lr), "Yes", "No"),
+    human_id = ifelse(match == "Yes", human_id, NA),
+    log10_lr = ifelse(match == "Yes", log10_lr, NA)
+  ) %>%
+  select(bloodmeal_id, match, human_id, log10_lr) %>%
+  distinct()
+
+bm_similarity <- read_csv("output/bloodmeals/human_similarities.csv")
+bm_n_hu <- n_distinct(c(bm_similarity$hu1, bm_similarity$hu2))
+bm_max_similarity <- bm_similarity %>%
+  filter(similarity != 1) %>%
+  pull(similarity) %>%
+  max()
+
+bm_exact_matches <- read_csv("output/bloodmeals/exact_matches.csv")
+bm_similarity_matches <- read_csv("output/bloodmeals/similarity_matches.csv")
+
+bm_bistro_matches_all <- read_csv("output/bloodmeals/bistro_matches.csv")
+
+bm_bistro_matches <- bm_bistro_matches_all %>%
+  filter(notes != "all log10LRs NA or Inf;no peaks above threshold") %>%
+  mutate(
+    match = str_to_sentence(match),
+    incomplete = case_when(
+      locus_count == 9 ~ "Complete profile",
+      locus_count < 9 ~ "Incomplete profile"
+    ),
+    multisource = case_when(
+      est_noc == 1 ~ "Single-source",
+      est_noc > 1 ~ "Multi-source"
+    )
+  )
+
+bm_lrs <- read_csv("output/bloodmeals/bistro_log10LRs.csv")
+bm_info <- bm_lrs %>%
+  select(bloodmeal_id, locus_count, est_noc) %>%
+  distinct()
+
+bm_thresh10_matches_all <- bm_lrs %>%
+  filter(log10_lr >= 10 & !is.infinite(log10_lr)) %>%
+  mutate(match = "Yes") %>%
+  select(bloodmeal_id, match, human_id)
+
+bm_thresh10_matches_all <- bm_info %>%
+  left_join(bm_thresh10_matches_all) %>%
+  mutate(match = ifelse(is.na(match), "No", match))
+
+bm_thresh10_matches <- bm_thresh10_matches_all %>%
+  filter(bloodmeal_id %in% bm_bistro_matches$bloodmeal_id)
+```
+
+```{r}
+provedit_samp_composition <- provedit_exact_matches %>%
+  select(bloodmeal_id) %>%
+  rowwise() %>%
+  mutate(
+    props_orig = gsub(
+      "^[0-9]+-", "",
+      gsub(".*[0-9][0-9]_|-M.*", "", bloodmeal_id)
+    ),
+    props_new = gsub("-", ";", props_orig),
+    first_part = gsub(paste0(props_orig, "-M.*"), "", bloodmeal_id),
+    second_part = gsub(paste0(".*", props_orig), "", bloodmeal_id),
+    bloodmeal_id_alt = ifelse(grepl("M", bloodmeal_id), paste0(first_part, props_new, second_part), bloodmeal_id)
+  ) %>%
+  ungroup() %>%
+  select(-c(props_orig, props_new, first_part, second_part)) %>%
+  separate(bloodmeal_id_alt,
+    sep = "-",
+    into = c(
+      "project1", "project2",
+      "contributor_id_dilution", "amplification_or_mixture",
+      "experiment_or_mixture", "amplification_mixture",
+      "experiment_mixture"
+    ), remove = FALSE
+  ) %>%
+  separate(contributor_id_dilution,
+    sep = "d",
+    into = c("human_id", "dilution_condition")
+  ) %>%
+  mutate(
+    project = paste0(project1, "-", project2),
+    dilution_number = ifelse(is.na(dilution_condition),
+      gsub("[a-z]|[A-Z]", "", experiment_or_mixture),
+      gsub("[a-z]", "", dilution_condition)
+    ),
+    condition = ifelse(is.na(dilution_condition),
+      gsub("M[0-9]", "", experiment_or_mixture),
+      gsub("[0-9]", "", dilution_condition)
+    ),
+    experiment = ifelse(is.na(dilution_condition), experiment_mixture, experiment_or_mixture),
+    template_mass = ifelse(is.na(dilution_condition), amplification_mixture, amplification_or_mixture),
+    mixture_ratio = ifelse(amplification_or_mixture == template_mass, NA, amplification_or_mixture),
+    template_mass = as.numeric(gsub("IP", "", template_mass))
+  ) %>%
+  separate_rows(human_id, mixture_ratio) %>%
+  mutate(
+    human_id = gsub(".*_", "", paste0(project, "-", human_id)),
+    mixture_ratio = as.numeric(mixture_ratio)
+  ) %>%
+  group_by(bloodmeal_id) %>%
+  mutate(
+    noc = n(),
+    mixture_proportion = ifelse(is.na(mixture_ratio), 1, mixture_ratio / sum(mixture_ratio)),
+    multisource = ifelse(noc == 1, "Single-source", "Multi-source")
+  ) %>%
+  select(-c( # duplicates
+    project1, project2, dilution_condition, experiment_or_mixture, experiment_mixture,
+    amplification_or_mixture, amplification_mixture, project,
+    # unneeded
+    dilution_number, condition, experiment, mixture_ratio
+  )) %>%
+  ungroup() %>%
+  left_join(provedit_bistro_matches %>%
+    select(bloodmeal_id, locus_count, incomplete) %>%
+    distinct())
+```
+
+## Figure 1: Matching algorithm
+
+```{r}
+bistro_algorithm <- grViz("digraph bistro {
+
+  # nodes
+  node [shape = box,
+  fontname = Helvetica]
+  'log10_lrs for all\nbloodmeal-human pairs';
+  'Select bloodmeal';
+  'All log10_lrs < 1.5?';
+  'Set threshold\nt = floor(max(log10_lr)*2)/2';
+  'Decrement threshold by 0.5';
+  'Count log10_lrs \u2265 t';
+  'Does output match t + 0.5?';
+  't = 1?';
+  'No matches';
+  'Final matches for bloodmeal';
+  'More bloodmeals?';
+  'End'
+
+  # edge statements
+  edge [fontname = Helvetica]
+  'log10_lrs for all\nbloodmeal-human pairs' -> 'Select bloodmeal'
+  'Select bloodmeal' -> 'All log10_lrs < 1.5?'
+  'All log10_lrs < 1.5?' -> 'No matches' [label = ' Yes']
+  'All log10_lrs < 1.5?' -> 'Set threshold\nt = floor(max(log10_lr)*2)/2' [label = ' No']
+  'Set threshold\nt = floor(max(log10_lr)*2)/2' -> 'Count log10_lrs \u2265 t'
+  'Decrement threshold by 0.5' -> 'Count log10_lrs \u2265 t'
+  'Count log10_lrs \u2265 t' -> 't = 1?' [label = '< NOC']
+  'Count log10_lrs \u2265 t' -> 'Does output match t + 0.5?' [label = '≥ NOC']
+  'Does output match t + 0.5?' -> 't = 1?' [label = 'No']
+  'Does output match t + 0.5?' -> 'Select largest\nmatch set pair ≤ NOC' [label = 'Yes']
+  't = 1?' -> 'Decrement threshold by 0.5' [label = 'No']
+  't = 1?' -> 'Select largest\nmatch set pair ≤ NOC' [label = 'Yes']
+  'No matches' -> 'More bloodmeals?'
+  'Select largest\nmatch set pair ≤ NOC' -> 'No matches' [label = '= 0']
+  'Select largest\nmatch set pair ≤ NOC' -> 'Final matches for bloodmeal' [label = '> 0']
+  'Final matches for bloodmeal' -> 'More bloodmeals?'
+  'More bloodmeals?' -> 'Select bloodmeal' [label = ' Yes']
+  'More bloodmeals?' -> 'End' [label = ' No']
+
+  subgraph {
+    rank = same; 'Final matches for bloodmeal'; 'No matches'
+  }
+}
+")
+
+bistro_algorithm
+
+bistro_algorithm %>%
+  export_svg() %>%
+  charToRaw() %>%
+  rsvg_png("figures/bistro_algorithm.png")
+```
+
+
+## Figure 2: Evaluation with provedit data
+
+Number of human sources
+
+```{r}
+provedit_n_hu
+```
+
+
+Number of single- and multi-source samples
+
+```{r}
+provedit_samp_composition %>%
+  select(bloodmeal_id, multisource) %>%
+  distinct() %>%
+  group_by(multisource) %>%
+  tally()
+```
+
+Maximum provedit similarity value between people in the database
+
+```{r}
+provedit_max_similarity
+```
+
+
+```{r}
+provedit_exact_matches_correct_none <- provedit_samp_composition %>%
+  left_join(provedit_exact_matches) %>%
+  filter(!is.na(human_id)) %>%
+  mutate(match = ifelse(is.na(match), "No", match))
+
+provedit_exact_matches_incorrect <- anti_join(provedit_exact_matches, provedit_samp_composition) %>%
+  filter(!is.na(human_id) & match == "Yes")
+
+provedit_similarity_matches_correct_none <- provedit_samp_composition %>%
+  left_join(provedit_similarity_matches) %>%
+  filter(!is.na(human_id)) %>%
+  mutate(match = ifelse(is.na(match), "No", match))
+
+provedit_similarity_matches_incorrect <- anti_join(provedit_similarity_matches, provedit_samp_composition) %>%
+  filter(!is.na(human_id) & match == "Yes")
+
+provedit_bistro_matches_correct_none <- provedit_samp_composition %>%
+  left_join(provedit_bistro_matches %>%
+    rename(bloodmeal_id = bloodmeal_id, human_id = human_id) %>%
+    rowwise() %>%
+    mutate(human_id = ifelse(nchar(human_id) == 11, paste0(substr(human_id, 1, 10), 0, substr(human_id, 11, 11)), human_id)) %>%
+    ungroup() %>%
+    select(-c(locus_count, incomplete))) %>%
+  filter(!is.na(human_id)) %>%
+  mutate(match = ifelse(is.na(match), "No", match))
+
+provedit_bistro_matches_incorrect <- anti_join(provedit_bistro_matches %>%
+  select(-c(locus_count, incomplete)) %>%
+  rename(bloodmeal_id = bloodmeal_id, human_id = human_id) %>%
+  rowwise() %>%
+  mutate(human_id = ifelse(nchar(human_id) == 11, paste0(substr(human_id, 1, 10), 0, substr(human_id, 11, 11)), human_id)) %>%
+  filter(match == "Yes"), provedit_samp_composition) %>%
+  filter(!is.na(human_id))
+
+provedit_thresh10_matches_correct_none <- provedit_samp_composition %>%
+  left_join(provedit_thresh10_matches %>%
+    rowwise() %>%
+    mutate(human_id = ifelse(nchar(human_id) == 11, paste0(substr(human_id, 1, 10), 0, substr(human_id, 11, 11)), human_id)) %>%
+    ungroup()) %>%
+  filter(!is.na(human_id)) %>%
+  mutate(match = ifelse(is.na(match), "No", match))
+
+provedit_thresh10_matches_incorrect <- anti_join(provedit_thresh10_matches %>%
+  rename(bloodmeal_id = bloodmeal_id, human_id = human_id) %>%
+  rowwise() %>%
+  mutate(human_id = ifelse(nchar(human_id) == 11, paste0(substr(human_id, 1, 10), 0, substr(human_id, 11, 11)), human_id)) %>%
+  filter(match == "Yes"), provedit_samp_composition) %>%
+  filter(!is.na(human_id))
+```
+
+
+```{r}
+provedit_bistro_matches_by_samp <- provedit_bistro_matches_correct_none %>%
+  select(bloodmeal_id, noc, locus_count, match) %>%
+  group_by(bloodmeal_id, noc, locus_count) %>%
+  mutate(n_match = sum(match == "Yes")) %>%
+  select(-match) %>%
+  distinct() %>%
+  left_join(provedit_bistro_matches_incorrect %>%
+    group_by(bloodmeal_id) %>%
+    summarize(n_incorrect = n())) %>%
+  mutate(n_incorrect = ifelse(is.na(n_incorrect), 0, n_incorrect)) %>%
+  mutate(n_missing = noc - n_match - n_incorrect) %>%
+  pivot_longer(c(n_match, n_incorrect, n_missing), names_to = "match_type") %>%
+  mutate(match_type = case_when(
+    match_type == "n_match" ~ "Correct match",
+    match_type == "n_incorrect" ~ "Incorrect match",
+    match_type == "n_missing" ~ "No match"
+  )) %>%
+  mutate(
+    incomplete = case_when(
+      locus_count == 15 ~ "Complete\nprofile",
+      TRUE ~ "Incomplete\nprofile"
+    ),
+    multisource = factor(ifelse(noc == 1, "Single-source", "Multi-source"),
+      levels = c("Single-source", "Multi-source")
+    ),
+    match_type = factor(match_type, levels = rev(c("Correct match", "Incorrect match", "No match")))
+  )
+
+(provedit_match_plot <- provedit_bistro_matches_by_samp %>%
+  filter(match_type == "Correct match") %>%
+  ggplot(aes(fill = as.character(noc), x = as.character(value))) +
+  geom_bar() +
+  scale_fill_grey(start = 0.9, end = 0.1) +
+  labs(fill = "Number of\ncontributors", y = "Number of\nsamples", x = "Number of correct matches\nidentified by bistro"))
+```
+
+
+```{r}
+provedit_bistro_matches_by_samp %>%
+  group_by(multisource) %>%
+  mutate(tot = n_distinct(bloodmeal_id)) %>%
+  group_by(multisource, tot, match_type) %>%
+  summarize(n_match = sum(value > 0)) %>%
+  filter(match_type == "Correct match") %>%
+  mutate(prop = n_match / tot)
+
+
+provedit_bistro_matches_by_samp %>%
+  group_by(multisource) %>%
+  mutate(tot = sum(value)) %>%
+  group_by(multisource, tot, match_type) %>%
+  summarize(n_match = sum(value)) %>%
+  filter(match_type == "Correct match") %>%
+  mutate(prop = n_match / tot)
+```
+
+
+```{r}
+(provedit_mixes <- provedit_bistro_matches_correct_none %>%
+  mutate(match = factor(match, levels = c("Yes", "No"))) %>%
+  filter(multisource == "Multi-source") %>%
+  ggplot(aes(x = match, y = mixture_proportion)) +
+  stat_compare_means(size = 3, label.x.npc = 0.4) +
+  geom_boxplot() +
+  labs(x = "Match identified\nby bistro", y = "Mixture proportion"))
+```
+
+```{r}
+provedit_bistro_matches_correct_none %>%
+  group_by(multisource, incomplete) %>%
+  mutate(tot = n()) %>%
+  group_by(match, incomplete, multisource, tot) %>%
+  tally() %>%
+  filter(match == "Yes") %>%
+  mutate(prop = n / tot)
+
+provedit_bistro_matches_correct_none %>%
+  group_by(incomplete) %>% # , multisource)
+  mutate(tot = n()) %>%
+  group_by(match, incomplete, tot) %>% # , multisource, tot) %>%
+  tally() %>%
+  filter(match == "Yes") %>%
+  mutate(prop = n / tot)
+```
+
+
+```{r}
+(provedit_incomplete <- provedit_bistro_matches_correct_none %>%
+  mutate(incomplete = gsub(" profile", "", incomplete)) %>%
+  ggplot(aes(x = incomplete, alpha = match)) +
+  geom_bar(position = "fill", fill = "grey50", width = 0.5) +
+  scale_alpha_manual(values = c(0, 1)) +
+  labs(x = "Sample STR\nprofile type", y = "Proportion of matches\nidentified by bistro") +
+  theme(legend.position = "none"))
+```
+
+```{r}
+provedit_comparison <- bind_rows(
+  provedit_exact_matches_correct_none %>%
+    select(bloodmeal_id, noc, match) %>%
+    group_by(bloodmeal_id, noc) %>%
+    mutate(n_match = sum(match == "Yes")) %>%
+    select(-match) %>%
+    distinct() %>%
+    left_join(provedit_exact_matches_incorrect %>%
+      group_by(bloodmeal_id) %>%
+      summarize(n_incorrect = n())) %>%
+    mutate(algorithm = "Exact"),
+  provedit_similarity_matches_correct_none %>%
+    select(bloodmeal_id, noc, match) %>%
+    group_by(bloodmeal_id, noc) %>%
+    mutate(n_match = sum(match == "Yes")) %>%
+    select(-match) %>%
+    distinct() %>%
+    left_join(provedit_similarity_matches_incorrect %>%
+      group_by(bloodmeal_id) %>%
+      summarize(n_incorrect = n())) %>%
+    mutate(algorithm = "Similarity"),
+  provedit_thresh10_matches_correct_none %>%
+    select(bloodmeal_id, noc, match) %>%
+    group_by(bloodmeal_id, noc) %>%
+    mutate(n_match = sum(match == "Yes")) %>%
+    select(-match) %>%
+    distinct() %>%
+    left_join(provedit_thresh10_matches_incorrect %>%
+      group_by(bloodmeal_id) %>%
+      summarize(n_incorrect = n())) %>%
+    mutate(algorithm = "Static threshold"),
+  provedit_bistro_matches_correct_none %>%
+    select(bloodmeal_id, noc, match) %>%
+    group_by(bloodmeal_id, noc) %>%
+    mutate(n_match = sum(match == "Yes")) %>%
+    select(-match) %>%
+    distinct() %>%
+    ungroup() %>%
+    left_join(provedit_bistro_matches_incorrect %>%
+      group_by(bloodmeal_id) %>%
+      summarize(n_incorrect = n())) %>%
+    mutate(algorithm = "bistro")
+) %>%
+  mutate(n_incorrect = ifelse(is.na(n_incorrect), 0, n_incorrect)) %>%
+  rowwise() %>%
+  mutate(n_missing = max((noc - n_match - n_incorrect), 0)) %>%
+  ungroup() %>%
+  pivot_longer(c(n_match, n_incorrect, n_missing), names_to = "match_type") %>%
+  mutate(
+    match_type = case_when(
+      match_type == "n_match" ~ "Correct match",
+      match_type == "n_incorrect" ~ "Incorrect match",
+      match_type == "n_missing" ~ "No match"
+    ),
+    match_type = factor(match_type, levels = rev(c("Correct match", "Incorrect match", "No match")))
+  ) %>%
+  left_join(provedit_bistro_matches %>%
+    select(bloodmeal_id, locus_count) %>%
+    distinct()) %>%
+  mutate(
+    incomplete = case_when(
+      locus_count == 15 ~ "Complete\nprofile",
+      TRUE ~ "Incomplete\nprofile"
+    ),
+    multisource = factor(ifelse(noc == 1, "Single-source", "Multi-source"),
+      levels = c("Single-source", "Multi-source")
+    ),
+    algorithm = factor(algorithm, levels = c("Exact", "Similarity", "Static threshold", "bistro"))
+  ) %>%
+  group_by(algorithm, multisource, incomplete, match_type) %>%
+  summarize(value = sum(value))
+```
+
+```{r}
+provedit_comparison %>%
+  group_by(algorithm, match_type) %>%
+  summarize(value = sum(value)) %>%
+  ungroup() %>%
+  add_row(algorithm = "Exact", match_type = "True negative") %>%
+  add_row(algorithm = "Similarity", match_type = "True negative") %>%
+  add_row(algorithm = "Static threshold", match_type = "True negative") %>%
+  add_row(algorithm = "bistro", match_type = "True negative") %>%
+  group_by(algorithm) %>%
+  mutate(value = ifelse(match_type == "True negative", sum(provedit_n_hu - provedit_samp_composition$noc) - value[match_type == "Incorrect match"], value)) %>%
+  mutate(match_type = case_when(
+    match_type == "No match" ~ "False negative",
+    match_type == "Incorrect match" ~ "False positive",
+    match_type == "Correct match" ~ "True positive",
+    TRUE ~ match_type
+  )) %>%
+  group_by(algorithm) %>%
+  summarize(
+    sensitivity = value[match_type == "True positive"] / (value[match_type == "True positive"] + value[match_type == "False negative"]),
+    specificity = value[match_type == "True negative"] / (value[match_type == "True negative"] + value[match_type == "False positive"])
+  )
+```
+
+```{r}
+full_join(
+  provedit_comparison %>%
+    group_by(algorithm, match_type) %>%
+    summarize(value = sum(value)) %>%
+    filter(match_type == "Correct match" & algorithm != "bistro"),
+  provedit_comparison %>%
+    group_by(algorithm, match_type) %>%
+    summarize(value = sum(value)) %>%
+    filter(match_type == "Correct match" & algorithm == "bistro") %>%
+    rename(bistro = value) %>%
+    ungroup() %>%
+    select(-algorithm)
+) %>%
+  mutate(
+    diff = bistro - value,
+    times_increase = 1 + diff / value
+  )
+```
+
+```{r}
+(provedit_compare_matches <- provedit_comparison %>%
+  filter(value != 0) %>%
+  mutate(
+    match_type = gsub(" match", "", match_type),
+    match_type = factor(ifelse(match_type == "No", "None", match_type),
+      levels = c("None", "Incorrect", "Correct")
+    ),
+    multisource = factor(multisource, levels = c("Multi-source", "Single-source")),
+    algorithm = factor(algorithm, levels = rev(levels(algorithm)))
+  ) %>%
+  filter(match_type == "Correct") %>%
+  group_by(algorithm, multisource) %>%
+  summarize(value = sum(value)) %>%
+  ggplot(aes(x = algorithm, y = value, fill = multisource)) +
+  geom_col(width = 0.5) +
+  geom_hline(
+    yintercept = sum(provedit_comparison$value[provedit_comparison$algorithm == "Exact"]),
+    linetype = "dashed"
+  ) +
+  geom_text(
+    label = "Perfect performance", x = 2.5,
+    y = sum(provedit_comparison$value[provedit_comparison$algorithm == "Exact"]) - 30,
+    check_overlap = TRUE
+  ) +
+  scale_fill_grey(start = 0.2, end = 0.8, guide = guide_legend(reverse = T)) +
+  labs(
+    x = "Matching algorithm", y = "Number of correct\nmatches identified",
+    fill = "True sample type"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)))
+```
+
+
+```{r}
+tibble(
+  algorithm = c("Exact", "Similarity", "Static threshold", "bistro"),
+  n_incorrect = c(
+    nrow(provedit_exact_matches_incorrect),
+    nrow(provedit_similarity_matches_incorrect),
+    nrow(provedit_thresh10_matches_incorrect),
+    nrow(provedit_bistro_matches_incorrect)
+  )
+)
+```
+
+
+```{r}
+(provedit_bistro_compare <- bind_rows(
+  provedit_exact_matches_correct_none %>%
+    mutate(
+      algorithm = "Exact",
+      match_type = "Correct"
+    ),
+  provedit_similarity_matches_correct_none %>%
+    mutate(
+      algorithm = "Similarity",
+      match_type = "Correct"
+    ),
+  provedit_thresh10_matches_correct_none %>%
+    mutate(
+      algorithm = "Static threshold",
+      match_type = "Correct"
+    ),
+  provedit_bistro_matches_correct_none %>%
+    mutate(
+      algorithm = "bistro",
+      match_type = "Correct"
+    ),
+  provedit_bistro_matches_incorrect %>%
+    mutate(
+      algorithm = "bistro",
+      match_type = "Incorrect"
+    ) %>%
+    left_join(provedit_samp_composition %>% select(bloodmeal_id, multisource))
+) %>%
+  filter(match == "Yes") %>%
+  select(-c(log10_lr, notes, thresh_low, est_noc, match)) %>%
+  # pivot_longer(c(exact_match, similarity_match, bistro_match), names_to = 'algorithm', values_to = 'match') %>%
+  group_by(bloodmeal_id, human_id, multisource, incomplete, match_type) %>%
+  summarize(algorithm_match = list(unique(algorithm))) %>%
+  mutate(
+    multisource = factor(multisource, levels = rev(unique(multisource))),
+    incomplete = gsub(" profile", "", incomplete),
+    type = factor(paste0(multisource, ",\n", tolower(match_type)),
+      levels = c("Single-source,\ncorrect", "Multi-source,\ncorrect", "Multi-source,\nincorrect", "Single-source,\nincorrect")
+    )
+  ) %>%
+  ggplot(aes(x = algorithm_match, fill = match_type)) +
+  geom_bar() +
+  scale_x_upset() +
+  scale_fill_grey(start = 0.8, end = 0.2) +
+  guides(fill = guide_legend(ncol = 1)) +
+  labs(x = "Algorithms that\nidentified the match", y = "Number of matches", fill = "Match type") +
+  theme(
+    axis.title.y = element_text(vjust = -15),
+    strip.text.y = element_text(angle = 0)
+  ))
+```
+
+
+```{r}
+provedit_fig <- ggarrange(
+  ggarrange(provedit_match_plot,
+    provedit_incomplete,
+    provedit_mixes,
+    nrow = 1, labels = "AUTO", widths = c(1.2, 1, 1)
+  ),
+  ggarrange(provedit_compare_matches,
+    provedit_bistro_compare,
+    labels = c("D", "E"), nrow = 1, widths = c(1, 1)
+  ),
+  ncol = 1, heights = c(1, 1.1)
+)
+ggsave(plot = provedit_fig, filename = "figures/provedit.png", width = 9, height = 7)
+```
+
+```{r}
+provedit_match_summary <- bind_rows(
+  provedit_exact_matches_correct_none %>%
+    group_by(bloodmeal_id, noc, multisource) %>%
+    summarize(n_match = sum(match == "Yes")) %>%
+    left_join(provedit_exact_matches_incorrect %>%
+      group_by(bloodmeal_id) %>%
+      summarize(n_incorrect = n())) %>%
+    mutate(algorithm = "Exact"),
+  provedit_similarity_matches_correct_none %>%
+    group_by(bloodmeal_id, noc, multisource) %>%
+    summarize(n_match = sum(match == "Yes")) %>%
+    left_join(provedit_similarity_matches_incorrect %>%
+      group_by(bloodmeal_id) %>%
+      summarize(n_incorrect = n())) %>%
+    mutate(algorithm = "Similarity"),
+  provedit_thresh10_matches_correct_none %>%
+    group_by(bloodmeal_id, noc, multisource) %>%
+    summarize(n_match = sum(match == "Yes")) %>%
+    left_join(provedit_thresh10_matches_incorrect %>%
+      group_by(bloodmeal_id) %>%
+      summarize(n_incorrect = n())) %>%
+    mutate(algorithm = "Static threshold"),
+  provedit_bistro_matches_correct_none %>%
+    group_by(bloodmeal_id, noc, multisource) %>%
+    summarize(n_match = sum(match == "Yes")) %>%
+    left_join(provedit_bistro_matches_incorrect %>%
+      group_by(bloodmeal_id) %>%
+      summarize(n_incorrect = n())) %>%
+    mutate(algorithm = "bistro")
+) %>%
+  mutate(n_incorrect = ifelse(is.na(n_incorrect), 0, n_incorrect)) %>%
+  mutate(n_missing = noc - n_match - n_incorrect) %>%
+  group_by(algorithm, multisource) %>%
+  summarize(
+    n_samp = n(),
+    n_samp_match = sum(n_match > 0),
+    n_source = sum(n_match) + sum(n_incorrect) + sum(n_missing),
+    n_match = sum(n_match),
+    n_incorrect = sum(n_incorrect)
+  )
+
+provedit_match_summary %>%
+  mutate(multisource = "All") %>%
+  group_by(algorithm, multisource) %>%
+  summarize(
+    n_samp = sum(n_samp),
+    n_samp_match = sum(n_samp_match),
+    n_source = sum(n_source),
+    n_match = sum(n_match),
+    n_incorrect = sum(n_incorrect)
+  ) %>%
+  bind_rows(provedit_match_summary) %>%
+  mutate(
+    n_samp_match = paste0(n_samp_match, "/", n_samp, " (", signif(n_samp_match / n_samp * 100, 2), "%)"),
+    n_match = paste0(n_match, "/", n_source, " (", signif(n_match / n_source * 100, 2), "%)"),
+    multisource = factor(multisource, levels = c("Single-source", "Multi-source", "All")),
+    algorithm = factor(algorithm, levels = rev(c("Exact", "Similarity", "Static threshold", "bistro")))
+  ) %>%
+  select(multisource, algorithm, n_samp_match, n_match, n_incorrect) %>%
+  arrange(multisource, algorithm) %>%
+  pivot_wider(
+    names_from = multisource,
+    values_from = c(n_samp_match, n_match, n_incorrect), names_vary = "slowest"
+  ) %>%
+  select(-c(`n_match_Single-source`, `n_incorrect_Single-source`, `n_incorrect_Multi-source`))
+```
+
+
+## Figure 3: Mosquito bloodmeals
+
+Number of human sources
+
+```{r}
+bm_n_hu
+```
+
+Maximum similarity value between people in the database
+
+```{r}
+bm_max_similarity
+```
+
+Total number of bloodmeal samples tested
+
+```{r}
+n_distinct(bm_bistro_matches_all$bloodmeal_id)
+```
+
+Number of samples with only AMEL gene returned (not used for LR matching)
+
+```{r}
+(n_amel_only <- n_distinct(bm_exact_matches$bloodmeal_id) - n_distinct(bm_bistro_matches$bloodmeal_id))
+```
+
+
+Number and proportion that did not return any peaks above a 200 RFU threshold, and number remaining
+
+```{r}
+sum(bm_bistro_matches_all$notes == "all log10LRs NA or Inf;no peaks above threshold") - n_amel_only
+```
+
+Total not used for matching
+
+```{r}
+sum(bm_bistro_matches_all$notes == "all log10LRs NA or Inf;no peaks above threshold")
+```
+
+Total used for matching, and proportion
+
+```{r}
+n_distinct(bm_bistro_matches$bloodmeal_id)
+n_distinct(bm_bistro_matches$bloodmeal_id) / n_distinct(bm_bistro_matches_all$bloodmeal_id)
+```
+
+Split by multisource
+
+```{r}
+bm_bistro_matches %>%
+  select(bloodmeal_id, est_noc, multisource) %>%
+  distinct() %>%
+  mutate(tot = n()) %>%
+  group_by(multisource, tot) %>%
+  summarize(
+    n = n(),
+    prop = n / unique(tot),
+    n_src = sum(est_noc)
+  )
+```
+
+Estimated NOC distribution
+
+```{r}
+bm_bistro_matches %>%
+  filter(multisource == "Multi-source") %>%
+  select(bloodmeal_id, est_noc) %>%
+  distinct() %>%
+  pull(est_noc) %>%
+  table()
+```
+
+
+```{r}
+(match_noc_inc_fig <- bm_bistro_matches %>%
+  group_by(bloodmeal_id, incomplete, est_noc) %>%
+  mutate(
+    n_matches = sum(!is.na(human_id)),
+    multisource = factor(ifelse(est_noc > 1, "Multi-source", "Single-source"), levels = c("Single-source", "Multi-source")),
+    incomplete = gsub(" profile", "", incomplete)
+  ) %>%
+  group_by(bloodmeal_id, incomplete, multisource, n_matches) %>%
+  summarize() %>%
+  ggplot(aes(x = incomplete, fill = as.character(n_matches))) +
+  facet_grid(~multisource, scales = "free", space = "free") +
+  geom_bar() +
+  scale_fill_grey(start = 0.8, end = 0.2) +
+  guides(fill = guide_legend(ncol = 1)) +
+  labs(
+    x = "STR profile type", y = "Number of bloodmeals",
+    fill = "Number of\nbistro matches\nto someone in\nthe database"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)))
+```
+
+```{r}
+bm_bistro_matches %>%
+  group_by(bloodmeal_id, incomplete, est_noc) %>%
+  summarize(n_matches = sum(!is.na(human_id))) %>%
+  group_by(incomplete) %>%
+  summarize(
+    n_bms = n(),
+    n_geq1match = sum(n_matches > 0)
+  ) %>%
+  mutate(prop = n_geq1match / n_bms)
+
+bm_bistro_matches %>%
+  group_by(bloodmeal_id, incomplete, est_noc) %>%
+  summarize(n_matches = sum(!is.na(human_id))) %>%
+  ungroup() %>%
+  summarize(
+    n_tot = n(),
+    n_multi = sum(est_noc > 1),
+    n_possible_matches = sum(est_noc),
+    n_eq1match = sum(n_matches == 1),
+    n_eq2match = sum(n_matches == 2),
+    n_eq3match = sum(n_matches == 3)
+  ) %>%
+  mutate(prop = n_eq2match / n_multi)
+
+bm_bistro_matches %>%
+  group_by(bloodmeal_id, est_noc) %>%
+  summarize(n_match = sum(!is.na(human_id))) %>%
+  ungroup() %>%
+  summarize(
+    n_src = sum(est_noc),
+    n_match = sum(n_match),
+    prop = n_match / n_src
+  )
+```
+
+```{r}
+tibble(
+  algorithm = c("Exact/similarity", "Static threshold"),
+  n_matches = c(
+    sum(bm_exact_matches$match == "Yes"),
+    sum(bm_thresh10_matches$match == "Yes")
+  ),
+  bistro = sum(bm_bistro_matches$match == "Yes")
+) %>%
+  mutate(
+    diff = bistro - n_matches,
+    times_increase = 1 + diff / n_matches
+  )
+```
+
+
+```{r}
+bm_exact_matches %>%
+  group_by(bloodmeal_id) %>%
+  summarize(n_matches = sum(!is.na(human_id))) %>%
+  ungroup() %>%
+  summarize(
+    n_bms = n(),
+    n_geq1match = sum(n_matches > 0)
+  ) %>%
+  mutate(prop = n_geq1match / n_bms)
+
+bm_thresh10_matches %>%
+  group_by(bloodmeal_id) %>%
+  summarize(n_matches = sum(!is.na(human_id))) %>%
+  ungroup() %>%
+  summarize(
+    n_bms = n(),
+    n_geq1match = sum(n_matches > 0)
+  ) %>%
+  mutate(prop = n_geq1match / n_bms)
+```
+
+```{r}
+bm_all_possible_long <- bm_bistro_matches %>%
+  group_by(bloodmeal_id, est_noc, multisource, incomplete) %>%
+  summarize() %>%
+  uncount(est_noc) %>%
+  group_by(bloodmeal_id) %>%
+  mutate(rn = row_number()) %>%
+  ungroup()
+
+bm_exact_long <- bm_all_possible_long %>%
+  left_join(bm_exact_matches %>%
+    group_by(bloodmeal_id) %>%
+    mutate(rn = row_number()) %>%
+    ungroup()) %>%
+  mutate(
+    match = ifelse(is.na(match), "No", match),
+    algorithm = "Exact/\nsimilarity"
+  ) %>%
+  select(bloodmeal_id, multisource, incomplete, match, human_id, algorithm)
+
+bm_thresh_long <- bm_all_possible_long %>%
+  left_join(bm_thresh10_matches %>%
+    group_by(bloodmeal_id) %>%
+    mutate(rn = row_number()) %>%
+    ungroup()) %>%
+  mutate(
+    match = ifelse(is.na(match), "No", match),
+    algorithm = "Static\nthreshold"
+  ) %>%
+  select(bloodmeal_id, multisource, incomplete, match, human_id, algorithm)
+
+bm_bistro_long <- bm_all_possible_long %>%
+  left_join(bm_bistro_matches %>%
+    rename(
+      bloodmeal_id = bloodmeal_id,
+      human_id = human_id
+    ) %>%
+    group_by(bloodmeal_id) %>%
+    mutate(rn = row_number()) %>%
+    ungroup()) %>%
+  mutate(
+    match = ifelse(is.na(match), "No", match),
+    algorithm = "bistro"
+  ) %>%
+  select(bloodmeal_id, multisource, incomplete, match, human_id, algorithm)
+
+bm_comparison <- bind_rows(bm_exact_long, bm_thresh_long, bm_bistro_long)
+```
+
+```{r}
+(bm_comparison_plot <- bm_comparison %>%
+  mutate(
+    incomplete = gsub(" ", "\n", incomplete),
+    multisource = factor(multisource, levels = c("Single-source", "Multi-source")),
+    algorithm = factor(algorithm, levels = c("bistro", "Static\nthreshold", "Exact/\nsimilarity"))
+  ) %>%
+  ggplot(aes(x = algorithm, fill = match)) +
+  facet_grid(incomplete ~ multisource, scales = "free", space = "free") +
+  geom_bar() +
+  scale_fill_manual(values = c("grey", "grey20")) +
+  scale_y_continuous(breaks = seq(0, 600, by = 50)) +
+  guides(fill = guide_legend(ncol = 1)) +
+  labs(
+    x = "Algorithm", y = "Number of possible matches",
+    fill = "Match to\nsomeone in\nthe database"
+  ) +
+  theme(
+    strip.text.y = element_text(angle = 0),
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)
+  ))
+```
+
+```{r}
+bm_fig <- ggarrange(match_noc_inc_fig + theme(legend.position = "bottom"),
+  bm_comparison_plot + theme(legend.position = "bottom"),
+  nrow = 1, widths = c(1, 1.5), labels = "AUTO"
+)
+ggsave(
+  plot = bm_fig, filename = "figures/bloodmeals.png",
+  width = 7, height = 6
+)
+```
+
+
+```{r}
+bm_match_summary <- bm_comparison %>%
+  group_by(bloodmeal_id, multisource, algorithm) %>%
+  summarize(
+    n_source = n(),
+    n_match = sum(match == "Yes")
+  ) %>%
+  group_by(algorithm, multisource) %>%
+  summarize(
+    n_samp = n(),
+    n_samp_match = sum(n_match > 0),
+    n_source = sum(n_source),
+    n_match = sum(n_match)
+  )
+
+bm_match_summary %>%
+  mutate(multisource = "All") %>%
+  group_by(algorithm, multisource) %>%
+  summarize(
+    n_samp = sum(n_samp),
+    n_samp_match = sum(n_samp_match),
+    n_source = sum(n_source),
+    n_match = sum(n_match)
+  ) %>%
+  bind_rows(bm_match_summary) %>%
+  mutate(
+    n_samp_match = paste0(n_samp_match, "/", n_samp, " (", signif(n_samp_match / n_samp * 100, 2), "%)"),
+    n_match = paste0(n_match, "/", n_source, " (", signif(n_match / n_source * 100, 2), "%)"),
+    multisource = factor(multisource, levels = c("Single-source", "Multi-source", "All")),
+    algorithm = factor(algorithm, levels = rev(c("Exact/\nsimilarity", "Static\nthreshold", "bistro")))
+  ) %>%
+  select(multisource, algorithm, n_samp_match, n_match) %>%
+  arrange(multisource, algorithm) %>%
+  pivot_wider(
+    names_from = multisource,
+    values_from = c(n_samp_match, n_match), names_vary = "slowest"
+  ) %>%
+  select(-c(`n_match_Single-source`))
+```
+
+
+
